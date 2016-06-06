@@ -1,0 +1,26 @@
+{
+  "name": "unik-web",
+  "version": "1.0.0",
+  "description": "A webpage for displaying rules, badges and leaderbords.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teodoran/unik-web.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "UNIK",
+    "IoT"
+  ],
+  "author": "@_teodoran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teodoran/unik-web/issues"
+  },
+  "homepage": "https://github.com/teodoran/unik-web#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
