@@ -1,156 +1,168 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Site Properties -->
-  <title>UNIKON</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="/styles/client.css">
-</head>
-<body>
-<!-- Page Contents -->
-<div class="pusher">
+<html lang="en">
+  <head>
+    <title>UNIKON</title>
 
-	<div class="ui fixed menu">
-    <div class="ui container">
-      <a href="#unikon" class="item">UNIKON</a>
-      <a href="#rules" class="item">Rules</a>
-      <a href="#badges" class="item">Badges</a>
-      <a href="#leaderboard" class="item">Learderboard</a>
-    </div>
-  </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="styles/client.css" rel="stylesheet">
+  </head>
 
-  <div id="unikon" class="ui inverted vertical masthead center aligned segment">
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        UNIKON
-      </h1>
-      <h2>Vi leker med IoT</h2>
-    </div>
-  </div>
+  <body id="unikon">
 
-	<div class="ui vertical stripe segment">
-    <div class="ui middle aligned container">
-      <div class="row">
-          <h3 class="ui header">Hva er UNIKON?</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#unikon">UNIKON</a>
+          <a class="navbar-brand" href="#badges">Badges</a>
+          <a class="navbar-brand" href="#leaderboard">Leaderboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="inverted">UNIKON</h1>
+        <p class="inverted">Universitetskonkurransen hvor vi leker med IoT</p>
       </div>
     </div>
-  </div>
 
-  <div id="rules" class="ui vertical stripe segment">
-    <div class="ui middle aligned container">
+    <div class="container">
       <div class="row">
-          <h3 class="ui header">Regler</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
+        <div class="col-md-3">
+          <h2>Fem timer</h2>
+          <p>
+Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en kaffetrakter og foketellingen fra 1910? Hva med gyroskop og en høytaler? Alt er lov! Løsningen lages at et lag på 3-4 personer.
+          </p>
+          <p>
+Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h2>En løsning</h2>
+          <p>
+Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen badger der dette er spesifisert. Bruk ting vi har tatt med, men kan også bruke dingser man har tatt med hjemmefra. Man kan også bruke data fra API for å lage en ekstra interessant løsning.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h2>Vinn badger...</h2>
+          <p>
+Underveis i konkurransen kan man vinne badger. Noen badger kan vinnes av flere team, mens andre badger vandrer mellom det laget som til en hver tid har løsningen som passer best bed badge-beskrivelsen. Hver badge er verdt poengene som står på badgen. For å bli tildelt en badge må man demonstrere funksjonaliteten for en av veilederene.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h2>...Og de andre deltakernes annerkjennelse!</h2>
+          <p>
+Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerene stemmer på hverandres løsninger. Hver stemme fra et annet lag er verdt 500 poeng. Vinneren er den som til slutt står igjen med flest poeng fra både badger og stemmer.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div id="badges" class="ui vertical stripe segment">
-    <div class="ui middle aligned container">
+      <hr>
+
+      <div class="row" id="badges">
+        <div class="col-md-12">
+          <h2>Badges</h2>
+        </div>
+      </div>
+
       <div class="row">
-          <h3 class="ui header">Badges</h3>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/1">
+            <div class="caption">
+              <h4>Early bird<span class="text-muted"> - 100 poeng</span></h4>
+              <p>Få kontakt med din første device</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/2">
+            <div class="caption">
+              <h4>Getting started<span class="text-muted"> - 25 poeng</span></h4>
+              <p>Få kontakt med din første device</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/3">
+            <div class="caption">
+              <h4>Moar powa!<span class="text-muted"> - 25 poeng</span></h4>
+              <p>Få kontakt med Wall Plug</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/4">
+            <div class="caption">
+              <h4>Soundcheck<span class="text-muted"> - 25 poeng</span></h4>
+              <p>Spill av en lyd fra høytaleren</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="ui link cards">
-
-			  <div class="card">
-			    <div class="image">
-			      <img src="http://lorempixel.com/g/290/290/technics/1">
-			    </div>
-			    <div class="content">
-			      <div class="header">Early bird</div>
-			      <div class="meta">
-			        <a>100 poeng</a>
-			      </div>
-			      <div class="description">
-			        Få kontakt med din første device.
-			      </div>
-			    </div>
-			  </div>
-
-			  <div class="card">
-			    <div class="image">
-			      <img src="http://lorempixel.com/g/290/290/technics/2">
-			    </div>
-			    <div class="content">
-			      <div class="header">My senses are tingling</div>
-			      <div class="meta">
-			        <span class="date">25 poeng</span>
-			      </div>
-			      <div class="description">
-			        Få kontakt med SensorTag
-			      </div>
-			    </div>
-			  </div>
-
-			  <div class="card">
-			    <div class="image">
-			      <img src="http://lorempixel.com/g/290/290/technics/3">
-			    </div>
-			    <div class="content">
-			      <div class="header">Moar powa!</div>
-			      <div class="meta">
-			        <a>25 poeng</a>
-			      </div>
-			      <div class="description">
-			        Få kontakt med Wall Plug.
-			      </div>
-			    </div>
-			  </div>
-
-
-			  <div class="card">
-			    <div class="image">
-			      <img src="http://lorempixel.com/g/290/290/technics/3">
-			    </div>
-			    <div class="content">
-			      <div class="header">Sound check?</div>
-			      <div class="meta">
-			        <a>25 poeng</a>
-			      </div>
-			      <div class="description">
-			        Ta i bruk høyttaler
-			      </div>
-			    </div>
-			  </div>
-
-			  <div class="card">
-			    <div class="image">
-			      <img src="http://lorempixel.com/g/290/290/technics/3">
-			    </div>
-			    <div class="content">
-			      <div class="header">Sound check?</div>
-			      <div class="meta">
-			        <a>25 poeng</a>
-			      </div>
-			      <div class="description">
-			        Ta i bruk høyttaler
-			      </div>
-			    </div>
-			  </div>
-
-			</div>
-    </div>
-  </div>
-
-  <div id="leaderboard" class="ui vertical stripe segment">
-    <div class="ui middle aligned container">
       <div class="row">
-          <h3 class="ui header">Leaderboard</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and 
-
-
-
-
-
-
-
-          empower your needs...through pure data analytics.</p>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/5">
+            <div class="caption">
+              <h4>Pull request<span class="text-muted"> - 400 poeng</span></h4>
+              <p>Skriv kode for et annet lag, som ikke er del av ditt lag sin løsning (og få den godkjent som en del av deres løsning!)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/6">
+            <div class="caption">
+              <h4>Open source<span class="text-muted"> - 300 poeng</span></h4>
+              <p>Noe kode i løsningen deres er så god at et annet lag tar den i bruk som en del av deres løsning</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/7">
+            <div class="caption">
+              <h4>Open sorcerer<span class="text-muted"> - 600 poeng</span></h4>
+              <p>Koden i løsningen deres er så god at minst to andre lag tar den i bruk</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/300/200/technics/8">
+            <div class="caption">
+              <h4>Language elitist<span class="text-muted"> - 500 poeng</span></h4>
+              <p>Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <hr>
+
+      <div class="row" id="leaderboard">
+        <div class="col-md-12">
+          <h2>Leaderboard</h2>
+          <ol>
+            <li>Superlaget - 1337 poeng</li>
+            <li>IoT challengers - 512 poeng</li>
+            <li>SummerStudentz - 400 poeng</li>
+            <li>Petter sitt lag - 312 poeng</li>
+            <li>SmallTalkers - 1.0f poeng</li>
+          </ol>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam &nbsp;|&nbsp; Teodor</p>
+      </footer>
     </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
