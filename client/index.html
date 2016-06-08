@@ -8,6 +8,8 @@
   </head>
 
   <body id="unikon">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -56,7 +58,6 @@ Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakeren
           </p>
         </div>
       </div>
-
       <hr>
 
       <div class="row" id="badges">
@@ -64,105 +65,23 @@ Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakeren
           <h2>Badges</h2>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/1">
-            <div class="caption">
-              <h4>Early bird<span class="text-muted"> - 100 poeng</span></h4>
-              <p>Få kontakt med din første device</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/2">
-            <div class="caption">
-              <h4>Getting started<span class="text-muted"> - 25 poeng</span></h4>
-              <p>Få kontakt med din første device</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/3">
-            <div class="caption">
-              <h4>Moar powa!<span class="text-muted"> - 25 poeng</span></h4>
-              <p>Få kontakt med Wall Plug</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/4">
-            <div class="caption">
-              <h4>Soundcheck<span class="text-muted"> - 25 poeng</span></h4>
-              <p>Spill av en lyd fra høytaleren</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/5">
-            <div class="caption">
-              <h4>Pull request<span class="text-muted"> - 400 poeng</span></h4>
-              <p>Skriv kode for et annet lag, som ikke er del av ditt lag sin løsning (og få den godkjent som en del av deres løsning!)</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/6">
-            <div class="caption">
-              <h4>Open source<span class="text-muted"> - 300 poeng</span></h4>
-              <p>Noe kode i løsningen deres er så god at et annet lag tar den i bruk som en del av deres løsning</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/7">
-            <div class="caption">
-              <h4>Open sorcerer<span class="text-muted"> - 600 poeng</span></h4>
-              <p>Koden i løsningen deres er så god at minst to andre lag tar den i bruk</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="thumbnail">
-            <img src="http://lorempixel.com/300/200/technics/8">
-            <div class="caption">
-              <h4>Language elitist<span class="text-muted"> - 500 poeng</span></h4>
-              <p>Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div id="badgesGrid"></div>
       <hr>
 
       <div class="row" id="leaderboard">
         <div class="col-md-12">
           <h2>Leaderboard</h2>
-          <ol>
-            <li>Superlaget - 1337 poeng</li>
-            <li>IoT challengers - 512 poeng</li>
-            <li>SummerStudentz - 400 poeng</li>
-            <li>Petter sitt lag - 312 poeng</li>
-            <li>SmallTalkers - 1.0f poeng</li>
-          </ol>
+          <div id="leaderboardList"></div>
         </div>
       </div>
-
       <hr>
 
       <footer>
         <p class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam &nbsp;|&nbsp; Teodor</p>
       </footer>
     </div>
+
+    <script type="text/javascript" src="leaderboard.js"></script>
+    <script type="text/javascript" src="badges.js"></script>
   </body>
 </html>
