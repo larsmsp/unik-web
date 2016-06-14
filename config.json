@@ -1,0 +1,20 @@
+{
+	"BADGES": [
+        {"name": "Early bird", "hashtag": "earlybird", "value": 100, "description": "Få kontakt med din første device", "image": "http://lorempixel.com/300/200/technics/1"},
+        {"name": "Getting started", "hashtag": "getting_started", "value": 25, "description": "Få kontakt med din første device", "image": "http://lorempixel.com/300/200/technics/2"},
+        {"name": "Moar powa!", "hashtag": "moar_powa", "value": 25, "description": "Få kontakt med Wall Plug", "image": "http://lorempixel.com/300/200/technics/3"},
+        {"name": "Soundcheck", "hashtag": "soundcheck", "value": 25, "description": "Spill av en lyd fra høytaleren", "image": "http://lorempixel.com/300/200/technics/4"},
+        {"name": "Pull request", "hashtag": "pull_request", "value": 400, "description": "Skriv kode for et annet lag, som ikke er del av ditt lag sin løsning (og få den godkjent som en del av deres løsning!)", "image": "http://lorempixel.com/300/200/technics/5"},
+        {"name": "Open source", "hashtag": "open_source", "value": 300, "description": "Noe kode i løsningen deres er så god at et annet lag tar den i bruk som en del av deres løsning", "image": "http://lorempixel.com/300/200/technics/6"},
+        {"name": "Open sorcerer", "hashtag": "open_sourcerer", "value": 600, "description": "Koden i løsningen deres er så god at minst to andre lag tar den i bruk", "image": "http://lorempixel.com/300/200/technics/7"},
+        {"name": "Language elitist", "hashtag": "languaguge_elitist", "value": 500, "description": "Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen", "image": "http://lorempixel.com/300/200/technics/8"}
+    ],
+
+    "TEAMS": [
+        {"name": "Team winners!", "hashtag": "TeamWinners", "points": 0},
+        {"name": "SmallTalkers", "hashtag": "SmallTalkers", "points": 0},
+        {"name": "Laget til Petter", "hashtag": "Laget_til_Petter", "points": 0},
+        {"name": "SummerStudentzzzz", "hashtag": "SummerStudentzzzz", "points": 0},
+        {"name": "Lambic laget", "hashtag": "Lambic_laget", "points": 0}
+    ]
+}

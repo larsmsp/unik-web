@@ -1,3 +1,5 @@
+var socket = socket || io();
+
 var testBadges = {
   badges:[
     {name: 'Early bird', value: 100, description: 'Få kontakt med din første device', image:'http://lorempixel.com/300/200/technics/1'},
@@ -56,7 +58,9 @@ var Badges = React.createClass({
   }
 });
 
-ReactDOM.render(
-  React.createElement(Badges, testBadges),
-  document.getElementById('badgesGrid')
-);
+socket.on('display:badges', function (badges) {
+  ReactDOM.render(
+    React.createElement(Badges, {badges: badges}),
+    document.getElementById('badgesGrid')
+  );
+});

@@ -1,12 +1,4 @@
-var testTeams = {
-  teams:[
-    {name: 'Team winners!', points: 5000},
-    {name: 'SmallTalkers', points: 4300},
-    {name: 'Laget til Petter', points: 2500},
-    {name: 'SummerStudentzzzz', points: 2300},
-    {name: 'Lambic laget', points: 1440}
-  ]
-};
+var socket = socket || io();
 
 var LeaderboardItem = React.createClass({
   render: function() {
@@ -24,7 +16,9 @@ var LeaderboardList = React.createClass({
   }
 });
 
-ReactDOM.render(
-  React.createElement(LeaderboardList, testTeams),
-  document.getElementById('leaderboardList')
-);
+socket.on('display:teams', function (teams) {
+  ReactDOM.render(
+    React.createElement(LeaderboardList, {teams: teams}),
+    document.getElementById('leaderboardList')
+  );
+});
