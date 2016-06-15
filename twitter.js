@@ -54,7 +54,9 @@ var updateTeamScore = (confirmedTweets, team) => {
 
 var updateAllTeamScores = (tweets, teams, callback) => {
     var confirmedBadgeTweets = allConfirmedBadgeTweets(tweets),
-        updatedTeams = teams.map(team => updateTeamScore(confirmedBadgeTweets, team));
+        updatedTeams = teams
+            .map(team => updateTeamScore(confirmedBadgeTweets, team))
+            .sort((a, b) =>  b.points - a.points);
 
     callback(updatedTeams);
 };

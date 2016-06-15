@@ -1,20 +1,50 @@
 {
-	"BADGES": [
-        {"name": "Early bird", "hashtag": "earlybird", "value": 100, "description": "Få kontakt med din første device", "image": "http://lorempixel.com/300/200/technics/1"},
-        {"name": "Getting started", "hashtag": "getting_started", "value": 25, "description": "Få kontakt med din første device", "image": "http://lorempixel.com/300/200/technics/2"},
-        {"name": "Moar powa!", "hashtag": "moar_powa", "value": 25, "description": "Få kontakt med Wall Plug", "image": "http://lorempixel.com/300/200/technics/3"},
-        {"name": "Soundcheck", "hashtag": "soundcheck", "value": 25, "description": "Spill av en lyd fra høytaleren", "image": "http://lorempixel.com/300/200/technics/4"},
-        {"name": "Pull request", "hashtag": "pull_request", "value": 400, "description": "Skriv kode for et annet lag, som ikke er del av ditt lag sin løsning (og få den godkjent som en del av deres løsning!)", "image": "http://lorempixel.com/300/200/technics/5"},
-        {"name": "Open source", "hashtag": "open_source", "value": 300, "description": "Noe kode i løsningen deres er så god at et annet lag tar den i bruk som en del av deres løsning", "image": "http://lorempixel.com/300/200/technics/6"},
-        {"name": "Open sorcerer", "hashtag": "open_sourcerer", "value": 600, "description": "Koden i løsningen deres er så god at minst to andre lag tar den i bruk", "image": "http://lorempixel.com/300/200/technics/7"},
-        {"name": "Language elitist", "hashtag": "languaguge_elitist", "value": 500, "description": "Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen", "image": "http://lorempixel.com/300/200/technics/8"}
-    ],
-
     "TEAMS": [
         {"name": "Team winners!", "hashtag": "TeamWinners", "points": 0},
         {"name": "SmallTalkers", "hashtag": "SmallTalkers", "points": 0},
         {"name": "Laget til Petter", "hashtag": "Laget_til_Petter", "points": 0},
         {"name": "SummerStudentzzzz", "hashtag": "SummerStudentzzzz", "points": 0},
         {"name": "Lambic laget", "hashtag": "Lambic_laget", "points": 0}
+    ],
+
+    "BADGES": [
+        {"name": "Early bird", "hashtag": "earlybird", "value": 100, "description": "Få kontakt med din første device", "category": "Intro", "image": "http://lorempixel.com/300/200/technics/1"},
+        {"name": "My senses are tingling", "hashtag": "My senses are tingling", "value": 25, "description": "Få kontakt med SensorTag", "category": "Intro", "image": "http://lorempixel.com/300/200/technics/2"},
+        {"name": "Moar powa!", "hashtag": "moar_powa", "value": 25, "description": "Få kontakt med Wall Plug", "category": "Intro", "image": "http://lorempixel.com/300/200/technics/3"},
+        {"name": "Soundcheck", "hashtag": "soundcheck", "value": 25, "description": "Spill av en lyd fra høytaleren", "category": "Intro", "image": "http://lorempixel.com/300/200/technics/4"},
+        {"name": "It's all connected!", "hashtag": "its_all_connected", "value": 100, "description": "Få to dingser til å kommunisere", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/5"},
+        {"name": "King of the Hill", "hashtag": "king_of_the_hill", "value": 1000, "description": "Tildeles den som har flest interagerende dingser (Vandremerke)", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/6"},
+        {"name": "Speaking Sensor", "hashtag": "speaking_sensor", "value": 100, "description": "Få en datamaskin til å lese opp data fra en sensor", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/7"},
+        {"name": "6th Sensor", "hashtag": "6th_sensor", "value": 100, "description": "Tatt i bruk alle sensorer på SensorTag", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/8"},
+        {"name": "IoT is a fad", "hashtag": "iot_is_a_fad", "value": 100, "description": "Lag en løsning uten noen sensorer eller devices", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/9"},
+        {"name": "The Eye of Providence", "hashtag": "the_eye_of_providence", "value": 500, "description": "Lag en løsning som utløser en hendelse i hjemmet når en person kommer hjem (BONUS: 100 poeng om den kan oppfatte at en gjest kommer/er på besøk", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/technics/10"},
+        {"name": "Beer G33k", "hashtag": "beer_g33k", "value": 500, "description": "Lag løsning for fermentering av øl på stabil temperatur", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/1"},
+        {"name": "Home DIY", "hashtag": "home_diy", "value": 1000, "description": "Digitaliser og automatiser hjemmet med et nettverk av dingser og hendelser", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/2"},
+        {"name": "Mirror, Mirror on The Wall...", "hashtag": "mirror_mirror_on_the_wall", "value": 100, "description": "Lag en skjerm (f.eks pad) som kan vise ting basert på hendelser i IoT-nettverket", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/3"},
+        {"name": "Useless Utility", "hashtag": "useless_utility", "value": 100, "description": "Noe sprøtt, kreativt og originalt, men helt unyttig", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/4"},
+        {"name": "Useful Utility", "hashtag": "useful_utility", "value": 100, "description": "En løsning som faktisk er nyttig", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/5"},
+        {"name": "A Sensor A Day Keeps The Doctor Away", "hashtag": "a_sensor_a_day_keeps_the_doctor_away", "value": 500, "description": "En helserelatert løsning", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/6"},
+        {"name": "Hospital@Home", "hashtag": "hospital_home", "value": 1000, "description": "En helhetlig helserelatert løsning", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/7"},
+        {"name": "Socially Awkward", "hashtag": "socially_awkward", "value": 100, "description": "Koble en sensor til sosiale medier", "category": "*Internet* of Things", "image": "http://lorempixel.com/300/200/people/8"},
+        {"name": "Data Miner", "hashtag": "data_miner", "value": 100, "description": "Samle data fra sensor(er)", "category": "Dataanalyse", "image": "http://lorempixel.com/300/200/people/9"},
+        {"name": "Data Analyst", "hashtag": "data_analyst", "value": 100, "description": "Analysere, visualisere og se sammenhenger i data som finnes", "category": "Dataanalyse", "image": "http://lorempixel.com/300/200/people/10"},
+        {"name": "The Alchemist", "hashtag": "the_alchemist", "value": 1000, "description": "Bruke tilsynelatende ubrukelig data til noe veldig kult og nyttig (f.eks. mikrofon-keylogger", "category": "Dataanalyse", "image": "http://lorempixel.com/300/200/sports/1"},
+        {"name": "Leave no one behind", "hashtag": "leave_no_one_behind", "value": 100, "description": "Hjelpe andre teamene videre", "category": "Samarbeid", "image": "http://lorempixel.com/300/200/sports/2"},
+        {"name": "Team Team Spirit", "hashtag": "team_team_spirit", "value": 100, "description": "Kuleste laget som har en sjel eller identitet. Kan være like klær, hatter, tema for laget e.l", "category": "Samarbeid", "image": "http://lorempixel.com/300/200/sports/3"},
+        {"name": "Pull Request", "hashtag": "pull_reques", "value": 100, "description": "Send minst en pull request til et open source prosjekt i løpet av konkurransen", "category": "Samarbeid", "image": "http://lorempixel.com/300/200/transport/4"},
+        {"name": "Open Source", "hashtag": "open_source", "value": 100, "description": "Tilgjengeligjør koden du skriver og dokumentasjonen på en plattform for deling av åpen kildekode (f.eks. https://github.com", "category": "Samarbeid", "image": "http://lorempixel.com/300/200/sports/5"},
+        {"name": "Git Together", "hashtag": "git_together", "value": 500, "description": "Dere bruker git eller lignende for å jobbe med kode innad i gruppen", "category": "Samarbeid", "image": "http://lorempixel.com/300/200/sports/6"},
+        {"name": "Mad Scientist", "hashtag": "mad_scientist", "value": 100, "description": "Craaazy, vitenskapelig løsning", "category": "Programmering", "image": "http://lorempixel.com/300/200/sports/7"},
+        {"name": "Geekness lvl over 9000", "hashtag": "over_9000", "value": 100, "description": "Meget nerdete løsning", "category": "Programmering", "image": "http://lorempixel.com/300/200/sports/8"},
+        {"name": "Quick and Dirty", "hashtag": "quick_and_dirty", "value": 100, "description": "Fikse noe med stygg hack. But, hey, it works", "category": "Programmering", "image": "http://lorempixel.com/300/200/sports/9"},
+        {"name": "Multilingual", "hashtag": "multilingual", "value": 100, "description": "Fire eller fler programmeringsspråk i løsningen", "category": "Programmering", "image": "http://lorempixel.com/300/200/sports/10"},
+        {"name": "Language elitist", "hashtag": "languaguge_elitist", "value": 1000, "description": "Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen. Markup-språk som json, xml, html og css teller ikke. (Vandremerke)", "category": "Programmering", "image": "http://lorempixel.com/300/200/technics/1"},
+        {"name": "Fort Knox", "hashtag": "fort_knox", "value": 1000, "description": "Supersikker løsning", "category": "Sikkerhet", "image": "http://lorempixel.com/300/200/technics/2"},
+        {"name": "Ports Wide Open", "hashtag": "ports_wide_open", "value": 500, "description": "Sikkerhetshull av dimensjoner (negativ verdi)", "category": "Sikkerhet", "image": "http://lorempixel.com/300/200/technics/3"},
+        {"name": "Shiny!", "hashtag": "shiny", "value": 100, "description": "Kul design", "category": "UX", "image": "http://lorempixel.com/300/200/technics/4"},
+        {"name": "Super useful", "hashtag": "super_useful", "value": 500, "description": "Bra UX", "category": "UX", "image": "http://lorempixel.com/300/200/technics/5"}
     ]
 }
+
+
+
