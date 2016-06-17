@@ -1,10 +1,10 @@
 {
     "TEAMS": [
-        {"name": "Team winners!", "hashtag": "TeamWinners", "points": 0},
-        {"name": "SmallTalkers", "hashtag": "SmallTalkers", "points": 0},
-        {"name": "Laget til Petter", "hashtag": "Laget_til_Petter", "points": 0},
-        {"name": "SummerStudentzzzz", "hashtag": "SummerStudentzzzz", "points": 0},
-        {"name": "Lambic laget", "hashtag": "Lambic_laget", "points": 0}
+        {"name": "Team winners!", "hashtag": "TeamWinners"},
+        {"name": "SmallTalkers", "hashtag": "SmallTalkers"},
+        {"name": "Laget til Petter", "hashtag": "Laget_til_Petter"},
+        {"name": "SummerStudentzzzz", "hashtag": "SummerStudentzzzz"},
+        {"name": "Lambic laget", "hashtag": "Lambic_laget"}
     ],
 
     "BADGES": [
@@ -43,7 +43,9 @@
         {"name": "Ports Wide Open", "hashtag": "ports_wide_open", "value": 500, "description": "Sikkerhetshull av dimensjoner (negativ verdi)", "category": "Sikkerhet", "image": "http://lorempixel.com/300/200/technics/3"},
         {"name": "Shiny!", "hashtag": "shiny", "value": 100, "description": "Kul design", "category": "UX", "image": "http://lorempixel.com/300/200/technics/4"},
         {"name": "Super useful", "hashtag": "super_useful", "value": 500, "description": "Bra UX", "category": "UX", "image": "http://lorempixel.com/300/200/technics/5"}
-    ]
+    ],
+
+    "PERPETUAL_BADGES": ["king_of_the_hill", "languaguge_elitist"]
 }
 
 

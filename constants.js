@@ -9,6 +9,7 @@ var adminsAsArray = (adminString) => adminString.split('@').slice(1).map(name =>
 
 module.exports = Object.freeze({
 	BADGES: badgesAndTeams.BADGES,
+	PERPETUAL_BADGES: badgesAndTeams.PERPETUAL_BADGES,
 	TEAMS: badgesAndTeams.TEAMS,
 	ADMINS: adminsAsArray(adminString),
 	CONFIRM_TAG: confirmTag

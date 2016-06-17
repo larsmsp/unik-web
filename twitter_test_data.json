@@ -1,329 +1,1085 @@
 {
-   "statuses":[
-      {
-         "created_at":"Sun Jun 12 21:53:06 +0000 2016",
-         "id":742112515925135400,
-         "id_str":"742112515925135361",
-         "text":"@cx_unik An administrator replys with #confirmed, and they get the badge that they requested. They also mark their tweet with #unik_test",
-         "truncated":false,
-         "entities":{
-            "hashtags":[
-               {
-                  "text":"confirmed",
-                  "indices":[
-                     38,
-                     48
-                  ]
-               },
-               {
-                  "text":"unik_test",
-                  "indices":[
-                     126,
-                     136
-                  ]
-               }
-            ],
-            "symbols":[
-
-            ],
-            "user_mentions":[
-               {
-                  "screen_name":"cx_unik",
-                  "name":"Unik Web",
-                  "id":742109596756639700,
-                  "id_str":"742109596756639744",
-                  "indices":[
-                     0,
-                     8
-                  ]
-               }
-            ],
-            "urls":[
-
+  "statuses": [
+    {
+      "created_at": "Wed Jun 15 02:20:34 +0000 2016",
+      "id": 7.429046043635e+17,
+      "id_str": "742904604363501569",
+      "text": "@cx_unik That's #confirmed #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "confirmed",
+            "indices": [
+              16,
+              26
             ]
-         },
-         "metadata":{
-            "iso_language_code":"en",
-            "result_type":"recent"
-         },
-         "source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-         "in_reply_to_status_id":742111437015920600,
-         "in_reply_to_status_id_str":"742111437015920645",
-         "in_reply_to_user_id":742109596756639700,
-         "in_reply_to_user_id_str":"742109596756639744",
-         "in_reply_to_screen_name":"cx_unik",
-         "user":{
-            "id":742109596756639700,
-            "id_str":"742109596756639744",
-            "name":"Unik Web",
-            "screen_name":"cx_unik",
-            "location":"",
-            "description":"",
-            "url":null,
-            "entities":{
-               "description":{
-                  "urls":[
-
-                  ]
-               }
-            },
-            "protected":false,
-            "followers_count":0,
-            "friends_count":0,
-            "listed_count":0,
-            "created_at":"Sun Jun 12 21:41:30 +0000 2016",
-            "favourites_count":0,
-            "utc_offset":null,
-            "time_zone":null,
-            "geo_enabled":false,
-            "verified":false,
-            "statuses_count":3,
-            "lang":"en",
-            "contributors_enabled":false,
-            "is_translator":false,
-            "is_translation_enabled":false,
-            "profile_background_color":"F5F8FA",
-            "profile_background_image_url":null,
-            "profile_background_image_url_https":null,
-            "profile_background_tile":false,
-            "profile_image_url":"http://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_image_url_https":"https://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_link_color":"2B7BB9",
-            "profile_sidebar_border_color":"C0DEED",
-            "profile_sidebar_fill_color":"DDEEF6",
-            "profile_text_color":"333333",
-            "profile_use_background_image":true,
-            "has_extended_profile":false,
-            "default_profile":true,
-            "default_profile_image":false,
-            "following":false,
-            "follow_request_sent":false,
-            "notifications":false
-         },
-         "geo":null,
-         "coordinates":null,
-         "place":null,
-         "contributors":null,
-         "is_quote_status":false,
-         "retweet_count":0,
-         "favorite_count":0,
-         "favorited":false,
-         "retweeted":false,
-         "lang":"en"
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              27,
+              37
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          {
+            "screen_name": "cx_unik",
+            "name": "Unik Web",
+            "id": 7.4210959675664e+17,
+            "id_str": "742109596756639744",
+            "indices": [
+              0,
+              8
+            ]
+          }
+        ],
+        "urls": [
+          
+        ]
       },
-      {
-         "created_at":"Sun Jun 12 21:48:49 +0000 2016",
-         "id":742111437015920600,
-         "id_str":"742111437015920645",
-         "text":"Some team wants the #earlybird badge. They also includes their team name #TeamWinners and the competition hashtag #unik_test",
-         "truncated":false,
-         "entities":{
-            "hashtags":[
-               {
-                  "text":"earlybird",
-                  "indices":[
-                     20,
-                     30
-                  ]
-               },
-               {
-                  "text":"TeamWinners",
-                  "indices":[
-                     73,
-                     85
-                  ]
-               },
-               {
-                  "text":"unik_test",
-                  "indices":[
-                     114,
-                     124
-                  ]
-               }
-            ],
-            "symbols":[
-
-            ],
-            "user_mentions":[
-
-            ],
-            "urls":[
-
-            ]
-         },
-         "metadata":{
-            "iso_language_code":"en",
-            "result_type":"recent"
-         },
-         "source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-         "in_reply_to_status_id":null,
-         "in_reply_to_status_id_str":null,
-         "in_reply_to_user_id":null,
-         "in_reply_to_user_id_str":null,
-         "in_reply_to_screen_name":null,
-         "user":{
-            "id":742109596756639700,
-            "id_str":"742109596756639744",
-            "name":"Unik Web",
-            "screen_name":"cx_unik",
-            "location":"",
-            "description":"",
-            "url":null,
-            "entities":{
-               "description":{
-                  "urls":[
-
-                  ]
-               }
-            },
-            "protected":false,
-            "followers_count":0,
-            "friends_count":0,
-            "listed_count":0,
-            "created_at":"Sun Jun 12 21:41:30 +0000 2016",
-            "favourites_count":0,
-            "utc_offset":null,
-            "time_zone":null,
-            "geo_enabled":false,
-            "verified":false,
-            "statuses_count":3,
-            "lang":"en",
-            "contributors_enabled":false,
-            "is_translator":false,
-            "is_translation_enabled":false,
-            "profile_background_color":"F5F8FA",
-            "profile_background_image_url":null,
-            "profile_background_image_url_https":null,
-            "profile_background_tile":false,
-            "profile_image_url":"http://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_image_url_https":"https://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_link_color":"2B7BB9",
-            "profile_sidebar_border_color":"C0DEED",
-            "profile_sidebar_fill_color":"DDEEF6",
-            "profile_text_color":"333333",
-            "profile_use_background_image":true,
-            "has_extended_profile":false,
-            "default_profile":true,
-            "default_profile_image":false,
-            "following":false,
-            "follow_request_sent":false,
-            "notifications":false
-         },
-         "geo":null,
-         "coordinates":null,
-         "place":null,
-         "contributors":null,
-         "is_quote_status":false,
-         "retweet_count":0,
-         "favorite_count":0,
-         "favorited":false,
-         "retweeted":false,
-         "lang":"en"
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
       },
-      {
-         "created_at":"Sun Jun 12 21:47:07 +0000 2016",
-         "id":742111012183244800,
-         "id_str":"742111012183244800",
-         "text":"Testing a new competition feed. This will be hosted on the hashtag #unik_test",
-         "truncated":false,
-         "entities":{
-            "hashtags":[
-               {
-                  "text":"unik_test",
-                  "indices":[
-                     67,
-                     77
-                  ]
-               }
-            ],
-            "symbols":[
-
-            ],
-            "user_mentions":[
-
-            ],
-            "urls":[
-
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": 7.4290079159855e+17,
+      "in_reply_to_status_id_str": "742900791598551040",
+      "in_reply_to_user_id": 7.4210959675664e+17,
+      "in_reply_to_user_id_str": "742109596756639744",
+      "in_reply_to_screen_name": "cx_unik",
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
             ]
-         },
-         "metadata":{
-            "iso_language_code":"en",
-            "result_type":"recent"
-         },
-         "source":"<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-         "in_reply_to_status_id":null,
-         "in_reply_to_status_id_str":null,
-         "in_reply_to_user_id":null,
-         "in_reply_to_user_id_str":null,
-         "in_reply_to_screen_name":null,
-         "user":{
-            "id":742109596756639700,
-            "id_str":"742109596756639744",
-            "name":"Unik Web",
-            "screen_name":"cx_unik",
-            "location":"",
-            "description":"",
-            "url":null,
-            "entities":{
-               "description":{
-                  "urls":[
-
-                  ]
-               }
-            },
-            "protected":false,
-            "followers_count":0,
-            "friends_count":0,
-            "listed_count":0,
-            "created_at":"Sun Jun 12 21:41:30 +0000 2016",
-            "favourites_count":0,
-            "utc_offset":null,
-            "time_zone":null,
-            "geo_enabled":false,
-            "verified":false,
-            "statuses_count":3,
-            "lang":"en",
-            "contributors_enabled":false,
-            "is_translator":false,
-            "is_translation_enabled":false,
-            "profile_background_color":"F5F8FA",
-            "profile_background_image_url":null,
-            "profile_background_image_url_https":null,
-            "profile_background_tile":false,
-            "profile_image_url":"http://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_image_url_https":"https://pbs.twimg.com/profile_images/742110481825964034/cN3DwPgz_normal.jpg",
-            "profile_link_color":"2B7BB9",
-            "profile_sidebar_border_color":"C0DEED",
-            "profile_sidebar_fill_color":"DDEEF6",
-            "profile_text_color":"333333",
-            "profile_use_background_image":true,
-            "has_extended_profile":false,
-            "default_profile":true,
-            "default_profile_image":false,
-            "following":false,
-            "follow_request_sent":false,
-            "notifications":false
-         },
-         "geo":null,
-         "coordinates":null,
-         "place":null,
-         "contributors":null,
-         "is_quote_status":false,
-         "retweet_count":0,
-         "favorite_count":1,
-         "favorited":false,
-         "retweeted":false,
-         "lang":"en"
-      }
-   ],
-   "search_metadata":{
-      "completed_in":0.042,
-      "max_id":742112515925135400,
-      "max_id_str":"742112515925135361",
-      "query":"%2523unik_test",
-      "refresh_url":"?since_id=742112515925135361&q=%2523unik_test&include_entities=1",
-      "count":15,
-      "since_id":0,
-      "since_id_str":"0"
-   }
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Wed Jun 15 02:05:25 +0000 2016",
+      "id": 7.4290079159855e+17,
+      "id_str": "742900791598551040",
+      "text": "#Lambic_laget wants the #beer_g33k badge #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "Lambic_laget",
+            "indices": [
+              0,
+              13
+            ]
+          },
+          {
+            "text": "beer_g33k",
+            "indices": [
+              24,
+              34
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              41,
+              51
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Tue Jun 14 23:49:36 +0000 2016",
+      "id": 7.4286661004683e+17,
+      "id_str": "742866610046828544",
+      "text": "@cx_unik That's #confirmed #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "confirmed",
+            "indices": [
+              16,
+              26
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              27,
+              37
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          {
+            "screen_name": "cx_unik",
+            "name": "Unik Web",
+            "id": 7.4210959675664e+17,
+            "id_str": "742109596756639744",
+            "indices": [
+              0,
+              8
+            ]
+          }
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": 7.428651389492e+17,
+      "in_reply_to_status_id_str": "742865138949197825",
+      "in_reply_to_user_id": 7.4210959675664e+17,
+      "in_reply_to_user_id_str": "742109596756639744",
+      "in_reply_to_screen_name": "cx_unik",
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Tue Jun 14 23:43:45 +0000 2016",
+      "id": 7.428651389492e+17,
+      "id_str": "742865138949197825",
+      "text": "#Lambic_laget wants the #soundcheck badge #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "Lambic_laget",
+            "indices": [
+              0,
+              13
+            ]
+          },
+          {
+            "text": "soundcheck",
+            "indices": [
+              24,
+              35
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              42,
+              52
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Tue Jun 14 22:36:01 +0000 2016",
+      "id": 7.4284809139769e+17,
+      "id_str": "742848091397689344",
+      "text": "@cx_unik That's #confirmed #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "confirmed",
+            "indices": [
+              16,
+              26
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              27,
+              37
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          {
+            "screen_name": "cx_unik",
+            "name": "Unik Web",
+            "id": 7.4210959675664e+17,
+            "id_str": "742109596756639744",
+            "indices": [
+              0,
+              8
+            ]
+          }
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": 7.4284356007719e+17,
+      "in_reply_to_status_id_str": "742843560077189120",
+      "in_reply_to_user_id": 7.4210959675664e+17,
+      "in_reply_to_user_id_str": "742109596756639744",
+      "in_reply_to_screen_name": "cx_unik",
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Tue Jun 14 22:18:00 +0000 2016",
+      "id": 7.4284356007719e+17,
+      "id_str": "742843560077189120",
+      "text": "#SmallTalkers wants the #languaguge_elitist badge #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "SmallTalkers",
+            "indices": [
+              0,
+              13
+            ]
+          },
+          {
+            "text": "languaguge_elitist",
+            "indices": [
+              24,
+              36
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              43,
+              53
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Tue Jun 14 03:46:03 +0000 2016",
+      "id": 7.425637282064e+17,
+      "id_str": "742563728206397440",
+      "text": "Testing a new competition feed. This will be hosted on the hashtag #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "unik_test",
+            "indices": [
+              67,
+              77
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.365959385302e+17,
+        "id_str": "736595938530201600",
+        "name": "jonny",
+        "screen_name": "jonny12589",
+        "location": "New Zealand",
+        "description": "CS:GO Player, Streamer, Student and occasional Rapper",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 18,
+        "friends_count": 106,
+        "listed_count": 0,
+        "created_at": "Sat May 28 16:32:11 +0000 2016",
+        "favourites_count": 8,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 25,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/736596497018540032\/ZHmtf6-T_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/736596497018540032\/ZHmtf6-T_normal.jpg",
+        "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/736595938530201600\/1464453291",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Sun Jun 12 21:53:06 +0000 2016",
+      "id": 7.4211251592514e+17,
+      "id_str": "742112515925135361",
+      "text": "@cx_unik An administrator replys with #confirmed, and they get the badge that they requested. They also mark their tweet with #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "confirmed",
+            "indices": [
+              38,
+              48
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              126,
+              136
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          {
+            "screen_name": "cx_unik",
+            "name": "Unik Web",
+            "id": 7.4210959675664e+17,
+            "id_str": "742109596756639744",
+            "indices": [
+              0,
+              8
+            ]
+          }
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": 7.4211143701592e+17,
+      "in_reply_to_status_id_str": "742111437015920645",
+      "in_reply_to_user_id": 7.4210959675664e+17,
+      "in_reply_to_user_id_str": "742109596756639744",
+      "in_reply_to_screen_name": "cx_unik",
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Sun Jun 12 21:48:49 +0000 2016",
+      "id": 7.4211143701592e+17,
+      "id_str": "742111437015920645",
+      "text": "Some team wants the #languaguge_elitist badge. They also includes their team name #TeamWinners and the competition hashtag #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "languaguge_elitist",
+            "indices": [
+              20,
+              30
+            ]
+          },
+          {
+            "text": "TeamWinners",
+            "indices": [
+              73,
+              85
+            ]
+          },
+          {
+            "text": "unik_test",
+            "indices": [
+              114,
+              124
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    },
+    {
+      "created_at": "Sun Jun 12 21:47:07 +0000 2016",
+      "id": 7.4211101218324e+17,
+      "id_str": "742111012183244800",
+      "text": "Testing a new competition feed. This will be hosted on the hashtag #unik_test",
+      "truncated": false,
+      "entities": {
+        "hashtags": [
+          {
+            "text": "unik_test",
+            "indices": [
+              67,
+              77
+            ]
+          }
+        ],
+        "symbols": [
+          
+        ],
+        "user_mentions": [
+          
+        ],
+        "urls": [
+          
+        ]
+      },
+      "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+      },
+      "source": "<a href=\"http:\/\/twitter.com\" rel=\"nofollow\">Twitter Web Client<\/a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 7.4210959675664e+17,
+        "id_str": "742109596756639744",
+        "name": "Unik Web",
+        "screen_name": "cx_unik",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": [
+              
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 1,
+        "listed_count": 0,
+        "created_at": "Sun Jun 12 21:41:30 +0000 2016",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 9,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/742110481825964034\/cN3DwPgz_normal.jpg",
+        "profile_link_color": "2B7BB9",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "is_quote_status": false,
+      "retweet_count": 0,
+      "favorite_count": 1,
+      "favorited": false,
+      "retweeted": false,
+      "lang": "en"
+    }
+  ],
+  "search_metadata": {
+    "completed_in": 0.025,
+    "max_id": 7.429046043635e+17,
+    "max_id_str": "742904604363501569",
+    "query": "%23unik_test",
+    "refresh_url": "?since_id=742904604363501569&q=%23unik_test&result_type=recent&include_entities=1",
+    "count": 100,
+    "since_id": 0,
+    "since_id_str": "0"
+  }
 }

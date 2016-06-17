@@ -5,7 +5,7 @@ var Twitter = require('twitter'),
     usingTwitter = process.env.USING_TWITTER || false,
     CONFIRM_TAG = process.env.CONFIRM_TAG || "confirmed",
     contestTag = process.env.CONTEST_TAG || '#unik_test',
-    client;
+    client = {};
 
 if (usingTwitter) {
     client = new Twitter({
@@ -25,15 +25,36 @@ var allConfirmTweets = tweets => tweets.filter(tweet => {
         .filter(tweet => CNST.ADMINS.find(admin => admin === tweet.user.screen_name));
 });
 
-var allBadgesFromTweet = (tweet) => {
+var badgeFromTweet = (tweet) => {
     return CNST.BADGES.filter(badge =>
         tweet.entities.hashtags.find(hashtag =>
             hashtag.text.toLowerCase() === badge.hashtag.toLowerCase()
         )
-    );
+    ).shift();
 };
 
-var allBadgeTweets = tweets => tweets.filter(tweet => allBadgesFromTweet(tweet).length > 0);
+var allBadgeTweets = tweets => {
+    var perpetualBadgesAlreadyClaimed = new Set();
+
+    return tweets
+        .sort((a, b) =>  Date.parse(b.created_at) - Date.parse(a.created_at))
+        .filter(tweet => {
+            var badge = badgeFromTweet(tweet);
+
+            if (!badge) {
+                return false;
+            }
+
+            var badgeTag = badge.hashtag,
+                isAlreadyClaimed = !perpetualBadgesAlreadyClaimed.has(badgeTag);
+
+            if (CNST.PERPETUAL_BADGES.find(perpetualBadge => perpetualBadge === badgeTag)) {
+                perpetualBadgesAlreadyClaimed.add(badgeTag);
+            }
+
+            return isAlreadyClaimed;
+        });
+};
 
 var allConfirmedBadgeTweets = (tweets) => {
     var badgeTweets = allBadgeTweets(tweets);
@@ -43,7 +64,7 @@ var allConfirmedBadgeTweets = (tweets) => {
 
 var teamScoreFromTweets = (confirmedTweets, team) =>
     tweetsWithHashtag(confirmedTweets, team.hashtag)
-        .map(tweet => allBadgesFromTweet(tweet)[0])
+        .map(tweet => badgeFromTweet(tweet))
         .map(badge => badge.value)
         .reduce((sum, point) => sum + point, 0);
 
@@ -63,10 +84,12 @@ var updateAllTeamScores = (tweets, teams, callback) => {
 
 exports.updateAllTeamScores = (callback, err) => {
     if (usingTwitter) {
-        client.get('search/tweets', {q: contestTag}, (errors, tweets) => {
+        client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100}, (errors, tweets) => {
             if(errors){
                 console.log(errors);
             } else {
+                // Use if an update of test-data is desired:
+                //fs.writeFileSync('./twitter_test_data.json', JSON.stringify(tweets));
                 updateAllTeamScores(tweets.statuses, CNST.TEAMS, (teams) => callback(teams));
             }
         });
