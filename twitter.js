@@ -56,10 +56,14 @@ var allBadgeTweets = tweets => {
         });
 };
 
-var allConfirmedBadgeTweets = (tweets) => {
-    var badgeTweets = allBadgeTweets(tweets);
+var allConfirmedTweets = (tweets) => {
     var confirmTweets = allConfirmTweets(tweets);
-    return badgeTweets.filter(tweet => confirmTweets.find(confirmTweet => confirmTweet.in_reply_to_status_id === tweet.id));
+    return tweets.filter(tweet => confirmTweets.find(confirmTweet => confirmTweet.in_reply_to_status_id === tweet.id));
+};
+
+var allConfirmedBadgeTweets = (tweets) => {
+    var confirmedTweets = allConfirmedTweets(tweets);
+    return allBadgeTweets(confirmedTweets);
 };
 
 var teamScoreFromTweets = (confirmedTweets, team) =>
