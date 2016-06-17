@@ -2,24 +2,24 @@ var socket = socket || io();
 
 var LeaderboardItem = React.createClass({
   render: function() {
-    return React.createElement('tr', null, 
-      React.createElement('td', null, this.props.position),
-      React.createElement('td', null, this.props.name),
-      React.createElement('td', null, this.props.points)
+    return React.createElement('tr', null,
+      React.createElement('td', null,
+        React.createElement('h2', null, this.props.position)),
+      React.createElement('td', null,
+        React.createElement('h2', null, this.props.name, ' ',
+          React.createElement('small', null, '#', this.props.hashtag))),
+      React.createElement('td', null,
+        React.createElement('h2', null, this.props.points))
     );
   }
 });
 
+
+//<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+
 var LeaderboardList = React.createClass({
   render: function() {
     return React.createElement('table', {className: 'table'},
-      React.createElement('thead', null,
-        React.createElement('tr', null,
-          React.createElement('th', null, '#'),
-          React.createElement('th', null, 'Navn'),
-          React.createElement('th', null, 'Poeng')
-        )
-      ),
       React.createElement('tbody', null,
         this.props.teams.map(function (team) {
           return React.createElement(LeaderboardItem, team);

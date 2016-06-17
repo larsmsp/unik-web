@@ -17,6 +17,8 @@ var Badge = React.createClass({
             this.props.name,
             React.createElement('span', {className: 'text-muted'}, ' - ', this.props.value, ' poeng')
           ),
+          React.createElement('p', null,
+            React.createElement('i', null, ' #', this.props.hashtag)),
           React.createElement('p', null, this.props.description)
         )
       )
