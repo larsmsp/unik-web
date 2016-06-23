@@ -6,18 +6,15 @@ var LeaderboardItem = React.createClass({
       React.createElement('td', null,
         React.createElement('h2', null, this.props.position)),
       React.createElement('td', null,
-        React.createElement('h2', null, this.props.name, ' ',
-          React.createElement('small', null, '#', this.props.hashtag))),
-      React.createElement('td', null,
-        React.createElement('h2', null, this.props.points))
+        React.createElement('h2', null, '#', this.props.hashtag)),
+      React.createElement('td', {className: 'text-right'},
+        React.createElement('h2', null, this.props.points,
+          React.createElement('span', {className: 'text-muted'}, ' poeng')))
     );
   }
 });
 
-
-//<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-
-var LeaderboardList = React.createClass({
+var LeaderboardTable = React.createClass({
   render: function() {
     return React.createElement('table', {className: 'table'},
       React.createElement('tbody', null,
@@ -41,7 +38,7 @@ var indexTeams = function (teams) {
 
 socket.on('display:teams', function (teams) {
   ReactDOM.render(
-    React.createElement(LeaderboardList, {teams: indexTeams(teams)}),
+    React.createElement(LeaderboardTable, {teams: indexTeams(teams)}),
     document.getElementById('leaderboardTable')
   );
 });

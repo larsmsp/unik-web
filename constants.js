@@ -1,16 +1,15 @@
 var fs = require('fs'),
-	configFile = './config.json',
-	json = fs.readFileSync(configFile, 'UTF-8'),
-	badgesAndTeams = JSON.parse(json),
+	
+	badges = JSON.parse(fs.readFileSync('badges.json', 'UTF-8')),
+	teamString = process.env.TEAMS || '#TeamWinners #SmallTalkers #Laget_til_Petter #SummerStudentzzzz #Lambic_laget',
 	adminString = process.env.ADMINS || '@cx_unik @_teodoran',
-	confirmTag = process.env.CONFIRM_TAG || 'confirmed';
-
-var adminsAsArray = (adminString) => adminString.split('@').slice(1).map(name => name.trim());
+	confirmTag = process.env.CONFIRM_TAG || 'confirmed',
+	splitOnTag = (string, separator) => string.split(separator).slice(1).map(name => name.trim());
 
 module.exports = Object.freeze({
-	BADGES: badgesAndTeams.BADGES,
-	PERPETUAL_BADGES: badgesAndTeams.PERPETUAL_BADGES,
-	TEAMS: badgesAndTeams.TEAMS,
-	ADMINS: adminsAsArray(adminString),
+	BADGES: badges.BADGES,
+	PERPETUAL_BADGES: badges.PERPETUAL_BADGES,
+	TEAMS: splitOnTag(teamString, '#').map((team) => { return {name: team, hashtag: team}; }),
+	ADMINS: splitOnTag(adminString, '@'),
 	CONFIRM_TAG: confirmTag
 });
