@@ -7,14 +7,34 @@ body {
     padding-bottom: 20px;
 }
 
-.navbar-inverse, .flex-header {
-    background-color: #D0021B;
+#navbar, .navbar-inverse, .flex-header {
     border-bottom: 0;
     border-width: 0;
+    background: none;
 }
 
 .navbar {
     margin: 0;
+}
+
+.video-holder {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.overlay {
+    z-index: 1;
+    position: relative;
+    background-color: rgba(208, 2, 27, 0.75);
 }
 
 .flex-header .container {
@@ -24,7 +44,10 @@ body {
     justify-content: center;
     padding-top: 10%;
     padding-bottom: 50px;
-    margin-bottom: 64px;
+}
+
+.description {
+    margin-top: 64px;
 }
 
 .flex-header .container > div {
@@ -51,9 +74,13 @@ body {
     text-transform: uppercase;
 }
 
-.description h2 > i + span {
+.description h2 > i {
     margin-right: 16px;
     color: #D0021B;
+    font-size: 125%;
+}
+.description h2 {
+    vertical-align: middle;
 }
 
 .description p {

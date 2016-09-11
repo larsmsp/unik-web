@@ -7,13 +7,15 @@ var NavbarItem = React.createClass({
 var Navbar = React.createClass({
     render: function () {
         return React.createElement('nav', {className: 'navbar navbar-inverse navbar-static-top'},
-            React.createElement('div', {className: 'col-xs-12'},
-                React.createElement('div', {className: 'navbar-header'},
-                    React.createElement('a', {className: 'navbar-brand', href: '/'},
-                        React.createElement('img', {className: 'header-logo', src: 'images/computas-logo.png'})),
-                    this.props.items.map(function (item) {
-                        return React.createElement(NavbarItem, item);
-                    })
+            React.createElement('div', {className: 'row'},
+                React.createElement('div', {className: 'col-xs-12'},
+                    React.createElement('div', {className: 'navbar-header'},
+                        React.createElement('a', {className: 'navbar-brand', href: '/'},
+                            React.createElement('img', {className: 'header-logo', src: 'images/computas-logo.png'})),
+                        this.props.items.map(function (item) {
+                            return React.createElement(NavbarItem, item);
+                        })
+                    )
                 )
             )
         );

@@ -12,6 +12,8 @@ var express = require('express'),
 
 app.use('/', express.static('client'));
 
+app.use('/node_modules', express.static('node_modules'));
+
 io.on('connect', (socket) => {
     io.emit('display:teams', teams);
     io.emit('display:badges', CNST.BADGES);
