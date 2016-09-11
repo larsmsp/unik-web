@@ -1,15 +1,86 @@
+html, body {
+    height: 100%;
+}
+
 body {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 20px;
 }
 
-.jumbotron {
-    background-image: url(/images/masthead_dark.png);
+.navbar-inverse, .flex-header {
+    background-color: #D0021B;
+    border-bottom: 0;
+    border-width: 0;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.flex-header .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 50px;
+    margin-bottom: 64px;
+}
+
+.flex-header .container > div {
+    flex: 1 1 auto;
+    align-self:center;
+}
+
+.logo-contest img {
+    max-width: 100%;
+    max-height: 100px;
 }
 
 .inverted {
-    color: #FFFFFF !important;
+    color: #fff;
 }
+
+.navbar-brand {
+    height: 100px;
+}
+
+.description h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.description h2 > i + span {
+    margin-right: 16px;
+    color: #D0021B;
+}
+
+.description p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    line-height: 1.75em;
+}
+
+.content-teaser {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+.next-event h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+.logo-contest > span {
+    display: none;
+}
+
 
 .bg-alternate {
 	background-color: #F9F9F9;

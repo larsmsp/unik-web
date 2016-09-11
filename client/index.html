@@ -1,124 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>UNIK</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="styles/client.css" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-  <body id="unikon">
+
+    <link href="styles/client.css" rel="stylesheet">
+
     <script src="socket.io/socket.io.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 
-    <div id="navbar"></div>
+</head>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="inverted">UNIK</h1>
-        <p class="inverted">Universitetskonkurransen hvor vi leker med IoT</p>
-      </div>
-    </div>
+<body id="unikon">
 
+<div id="navbar"></div>
+
+<div class="flex-header">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Fem timer</h2>
-          <p>
-Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en kaffetrakter og folketellingen fra 1910? Hva med gyroskop og en høyttaler? Alt er lov! Løsningen lages at et lag på 3-4 personer.
-          </p>
-          <p>
-Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
-          </p>
+        <div class="header">
+            <h1 class="inverted logo-contest">
+                <img src="images/iot-utfordringen.png">
+                <span>IoT Utfordringen</span>
+            </h1>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>En løsning</h2>
-          <p>
-Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen merker (badges, doh!) der noe annet er spesifisert. Bruk ting vi har tatt med, eller ta gjerne med dingser hjemmefra. Vi oppfordrer dere også til å inkludere data fra eksterne kilder (f.eks. <a href="http://data.norge.no/">data.norge.no</a>, eller <a href="https://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra interessant løsning.
-          </p>
+        <div class="content-teaser">
+            Utfordringen animert inn
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Vinn merker...</h2>
-          <p>
-Underveis i konkurransen kan man vinne merker. Merker gir poeng. Poeng trenger du for å vinne. Noen merker kan vinnes av flere team, mens andre merker vandrer mellom det laget som til en hver tid har løsningen som passer best med merkebeskrivelsen. For å få tildelt et merke må man demonstrere funksjonaliteten for en av veilederene.
-          </p>
+        <div class="next-event">
+            <h4 class="inverted">Universitet i Oslo</h4>
+            <p class="inverted">22. september - kl. 16.00</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>...Og de andre deltakernes annerkjennelse!</h2>
-          <p>
-Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på hverandres løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er den som til slutt står igjen med flest poeng fra både merker og stemmer.
-          </p>
-        </div>
-      </div>
 
-      <br>
-      
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Tips</h1>
-          <hr>
-          <h4>Bruk twitter for å be om å få tildelt merker</h4>
-          <p>
-For å få tildelt et merke, må man be om det på twitter. Post en tweet med hastaggen for laget ditt, merket dere vil ha og konkurransen vi er på. Et eksempel kan være "#TeamAwesome vil ha #earlybird merket #unik_test".
-          </p>
-          <p>
-Etter at dere har tweetet, vil en veileder ta turen og bekrefte at dere oppfyller kravene til merket. Hvis hun/han er fornøyd, vil han/hun retweete dere, og laget vil få tildelt poengene som merket er verdt.
-          </p>
-          <br>
-
-          <h4>Bare ett lag av gangen kan ha et vandremerke</h4>
-          <p>
-Noen merker er vandremerker. Bare ett lag av gangen kan ha disse merkene, og det er laget som til en hver tid har en løsning som best oppfyller kravene til vandremerket. Siden vandremerker er litt ekstra vanskelige å få, og til en hver tid kan bli stjålet av et annet lag, er de verdt ekastra mange poeng.
-          </p>
-          <p>
-Vandremerker tildeles via twitter, på samme måte som vanlige merker.
-          </p>
-          <br>
-
-          <h4>Tenk på strategi</h4>
-          <p>
-Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere merkene? Er det publikums stemmer som gjør at deres løsning stikker av med seieren?
-          </p>
-          <br>
-
-          <h4>Lykke til!</h4>
-          <br>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Ressurser</h1>
-          <hr>
-          <ul>
-            <li><a href="https://github.com/mehmandarov/sensortag-gettingstarted">Getting started-guide til sensortag</a></li>
-            <li><a href="https://github.com/mapster/iothub">Getting started-guide til IOT-Hub</a></li>
-            <li><a href="https://github.com/teodoran/loudspeaker-gettingstarted">Getting started-guide til høyttaler</a></li>
-            <li><a href="https://confluence.computas.no/pages/viewpage.action?pageId=207723493">Confluence-side for workshopen</a></li>
-            <li><a href="http://data.norge.no/">data.norge.no</a></li>
-            <li><a href="https://labs.ruter.no/">labs.ruter.no</a></li>
-            <li><a href="https://market.mashape.com/explore">Mashape</a></li>
-            <li><a href="https://docs.google.com/a/andeelstad.com/forms/d/1iXybcy13gtWT0m_CQ6PWYvrsHtHRNcj4nEqVDbGfJ9w/viewform">Hvem vinner?</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-
-      <footer>
-        <div class="container text-center">
-          <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam &nbsp;|&nbsp; Teodor</h4>
-        </div>
-      </footer>
     </div>
+</div>
 
-    <script type="text/javascript" src="navbar.js"></script>
-    <script type="text/javascript" src="badges.js"></script>
-  </body>
+<section class="container description">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <h2><i class="fa fa-clock"></i><span>Fem timer</span></h2>
+            <p>Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en
+                kaffetrakter og folketellingen fra 1910? Hva med gyroskop og en høyttaler? Alt er lov! Løsningen lages
+                at et lag på 3-4 personer.</p>
+            <p>
+                Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h2><i class="fa fa-flask"></i><span>En løsning</span></h2>
+            <p>
+                Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen merker (badges, doh!)
+                der noe annet er spesifisert. Bruk ting vi har tatt med, eller ta gjerne med dingser hjemmefra. Vi
+                oppfordrer dere også til å inkludere data fra eksterne kilder (f.eks. <a href="http://data.norge.no/">data.norge.no</a>,
+                eller <a href="https://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra interessant løsning.
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h2><i class="fa fa-trophy"></i>Vinn badges</h2>
+            <p>
+                Underveis i konkurransen kan man vinne merker. Merker gir poeng. Poeng trenger du for å vinne. Noen
+                merker kan vinnes av flere team, mens andre merker vandrer mellom det laget som til en hver tid har
+                løsningen som passer best med merkebeskrivelsen. For å få tildelt et merke må man demonstrere
+                funksjonaliteten for en av veilederene.
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <h2>... Og de andre deltakernes annerkjennelse!</h2>
+            <p>
+                Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på hverandres
+                løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er den som
+                til slutt står igjen med flest poeng fra både merker og stemmer.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container tips">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Tips</h1>
+            <hr>
+            <h4>Bruk twitter for å be om å få tildelt merker</h4>
+            <p>
+                For å få tildelt et merke, må man be om det på twitter. Post en tweet med hastaggen for laget ditt,
+                merket dere vil ha og konkurransen vi er på. Et eksempel kan være "#TeamAwesome vil ha #earlybird merket
+                #unik_test".
+            </p>
+            <p>
+                Etter at dere har tweetet, vil en veileder ta turen og bekrefte at dere oppfyller kravene til merket.
+                Hvis hun/han er fornøyd, vil han/hun retweete dere, og laget vil få tildelt poengene som merket er
+                verdt.
+            </p>
+            <br>
+
+            <h4>Bare ett lag av gangen kan ha et vandremerke</h4>
+            <p>
+                Noen merker er vandremerker. Bare ett lag av gangen kan ha disse merkene, og det er laget som til en
+                hver tid har en løsning som best oppfyller kravene til vandremerket. Siden vandremerker er litt ekstra
+                vanskelige å få, og til en hver tid kan bli stjålet av et annet lag, er de verdt ekastra mange poeng.
+            </p>
+            <p>
+                Vandremerker tildeles via twitter, på samme måte som vanlige merker.
+            </p>
+            <br>
+
+            <h4>Tenk på strategi</h4>
+            <p>
+                Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere
+                merkene? Er det publikums stemmer som gjør at deres løsning stikker av med seieren?
+            </p>
+            <br>
+
+            <h4>Lykke til!</h4>
+            <br>
+        </div>
+    </div>
+</section>
+
+<section class="resources">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Ressurser</h1>
+            <hr>
+            <ul>
+                <li><a href="https://github.com/mehmandarov/sensortag-gettingstarted">Getting started-guide til
+                    sensortag</a></li>
+                <li><a href="https://github.com/mapster/iothub">Getting started-guide til IOT-Hub</a></li>
+                <li><a href="https://github.com/teodoran/loudspeaker-gettingstarted">Getting started-guide til
+                    høyttaler</a></li>
+                <li><a href="https://confluence.computas.no/pages/viewpage.action?pageId=207723493">Confluence-side for
+                    workshopen</a></li>
+                <li><a href="http://data.norge.no/">data.norge.no</a></li>
+                <li><a href="https://labs.ruter.no/">labs.ruter.no</a></li>
+                <li><a href="https://market.mashape.com/explore">Mashape</a></li>
+                <li>
+                    <a href="https://docs.google.com/a/andeelstad.com/forms/d/1iXybcy13gtWT0m_CQ6PWYvrsHtHRNcj4nEqVDbGfJ9w/viewform">Hvem
+                        vinner?</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container text-center">
+        <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp;
+            Rustam &nbsp;|&nbsp; Teodor</h4>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="navbar.js"></script>
+<script type="text/javascript" src="badges.js"></script>
+</body>
 </html>
