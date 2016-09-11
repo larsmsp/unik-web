@@ -99,7 +99,18 @@ body {
     font-size: 36px;
 }
 
-.next-event h4 {
+.events {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+}
+.events > .event {
+    flex: 1 1 auto;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.events h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
 }
