@@ -5,7 +5,7 @@ var AnimateContest = React.createClass({
                 'Hvem lager den beste IoT-løsningen?',
                 'Fem timer',
                 'En løsning',
-                'Vi ser dere på ...'
+                'Bli med i konkurransen på:'
             ]
         }
     },

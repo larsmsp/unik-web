@@ -9,14 +9,12 @@ var divideIntoRows = function (array, rowSize) {
 
 var Badge = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'col-md-3'},
+    return React.createElement('div', {className: 'col-sm-6 col-md-3 badge-wrapper'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
-        React.createElement('img', {src: this.props.image}),
-        React.createElement('div', {className: 'caption'},
-          React.createElement('h4', null, '#', this.props.hashtag),
-          React.createElement('h4', null, React.createElement('span', {className: 'text-muted'}, this.props.value, ' poeng')),
-          React.createElement('p', null, this.props.description)
-        )
+        // React.createElement('img', {src: this.props.image}),
+        React.createElement('h4', null, '#', this.props.hashtag),
+        React.createElement('h4', null, React.createElement('span', {className: 'text-success'}, this.props.value, ' poeng')),
+        React.createElement('p', null, this.props.description)
       )
     );
   }
@@ -47,7 +45,7 @@ var Badges = React.createClass({
 var BadgeCategoryTable = React.createClass({
   render: function () {
     return React.createElement('div', null,
-      React.createElement('h1', null, this.props.badges[0].category, '-merker'),
+      React.createElement('h2', null, this.props.badges[0].category),
       React.createElement('hr', null),
       React.createElement(Badges, {badges: this.props.badges})
     );

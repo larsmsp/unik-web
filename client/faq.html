@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UNIK</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+
+    <link href="styles/client.css" rel="stylesheet">
+
+    <script src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+    <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
+
+</head>
+
+<body id="unikon">
+
+<div class="flex-header video-holder">
+    <video class="video-background" autoplay loop poster="images/red-background.png" id="vid">
+        <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
+        <source src="videos/tech-1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <div class="container-fluid" id="navbar"></div>
+        <div class="container">
+            <div class="header">
+                <h1 class="inverted logo-contest">
+                    <img src="images/iot-utfordringen.png">
+                    <span>IoT Utfordringen</span>
+                </h1>
+            </div>
+            <div class="content-teaser">Badges</div>
+
+        </div>
+    </div>
+</div>
+
+<section class="container tips">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>FAQ</h1>
+            <hr>
+            <h4>Hvordan får man tildelt merker?</h4>
+            <p>
+                For å få tildelt et merke, må man be om det på twitter. Post en tweet med hastaggen for laget ditt,
+                merket dere vil ha og konkurransen vi er på. Et eksempel kan være "#TeamAwesome vil ha #earlybird merket
+                #unik_test".
+            </p>
+            <p>
+                Etter at dere har tweetet, vil en veileder ta turen og bekrefte at dere oppfyller kravene til merket.
+                Hvis hun/han er fornøyd, vil han/hun retweete dere, og laget vil få tildelt poengene som merket er
+                verdt.
+            </p>
+            <br>
+
+            <h4>Bare ett lag av gangen kan ha et vandremerke</h4>
+            <p>
+                Noen merker er vandremerker. Bare ett lag av gangen kan ha disse merkene, og det er laget som til en
+                hver tid har en løsning som best oppfyller kravene til vandremerket. Siden vandremerker er litt ekstra
+                vanskelige å få, og til en hver tid kan bli stjålet av et annet lag, er de verdt ekastra mange poeng.
+            </p>
+            <p>
+                Vandremerker tildeles via twitter, på samme måte som vanlige merker.
+            </p>
+            <br>
+
+            <h4>Tenk på strategi</h4>
+            <p>
+                Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere
+                merkene? Er det publikums stemmer som gjør at deres løsning stikker av med seieren?
+            </p>
+            <br>
+
+            <h4>Lykke til!</h4>
+            <br>
+        </div>
+    </div>
+</section>
+
+<section class="container resources">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Ressurser</h1>
+            <hr>
+            <ul>
+                <li><a href="https://github.com/mehmandarov/sensortag-gettingstarted">Getting started-guide til
+                    sensortag</a></li>
+                <li><a href="https://github.com/mapster/iothub">Getting started-guide til IOT-Hub</a></li>
+                <li><a href="https://github.com/teodoran/loudspeaker-gettingstarted">Getting started-guide til
+                    høyttaler</a></li>
+                <li><a href="https://confluence.computas.no/pages/viewpage.action?pageId=207723493">Confluence-side for
+                    workshopen</a></li>
+                <li><a href="http://data.norge.no/">data.norge.no</a></li>
+                <li><a href="https://labs.ruter.no/">labs.ruter.no</a></li>
+                <li><a href="https://market.mashape.com/explore">Mashape</a></li>
+                <li>
+                    <a href="https://docs.google.com/a/andeelstad.com/forms/d/1iXybcy13gtWT0m_CQ6PWYvrsHtHRNcj4nEqVDbGfJ9w/viewform">Hvem
+                        vinner?</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container text-center">
+        <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp;
+            Rustam &nbsp;|&nbsp; Teodor</h4>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="navbar.js"></script>
+<!--<script type="text/javascript" src="badges.js"></script>-->
+<script type="text/javascript" src="typewriter.js"></script>
+</body>
+</html>

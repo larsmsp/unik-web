@@ -29,6 +29,8 @@ body {
     right: 0;
     bottom: 0;
     z-index: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .overlay {
@@ -55,7 +57,10 @@ body {
 }
 
 .description {
-    margin-top: 64px;
+    margin-top: 32px;
+    padding-top: 32px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
 
 .flex-header .container > div {
@@ -116,7 +121,7 @@ body {
 
 #events.visible {
     visibility: visible;
-    transform: translateY(1000%);  /* make things invisible upon start */
+    transform: translateX(1000%);  /* make things invisible upon start */
     -webkit-animation:translate-Y ease-in-out 1;  /* call our keyframe named translate-Y, use animattion ease-in and repeat it only 1 time */
     -moz-animation:translate-Y ease-in-out 1;
     animation:translate-Y ease-in-out 1;
@@ -125,14 +130,14 @@ body {
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:3s;
-    -moz-animation-duration:3s;
-    animation-duration:3s;
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    animation-duration:2s;
 }
 
-@-webkit-keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
-@-moz-keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
-@keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
+@-webkit-keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
+@-moz-keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
+@keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
 
 #events > .event {
     flex: 1 1 auto;
@@ -149,7 +154,26 @@ body {
     display: none;
 }
 
+blockquote {
+    border-color: #D0021B;
+}
 
 .bg-alternate {
 	background-color: #F9F9F9;
+}
+
+.badge-wrapper {
+    min-height: 180px;
+}
+
+.badge-wrapper .thumbnail {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.grey-wrapper {
+    background: #f1f1f1;
 }
