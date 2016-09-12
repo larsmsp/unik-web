@@ -5,7 +5,7 @@ var AnimateContest = React.createClass({
                 'Hvem lager den beste IoT-løsningen?',
                 'Fem timer',
                 'En løsning',
-                'Vi ser dere på IoT-utfordringen:'
+                'Vi ser dere på ...'
             ]
         }
     },
@@ -20,8 +20,11 @@ var AnimateContest = React.createClass({
     changePosition: function () {
         var that = this;
 
-        if (this.state.position === this.props.text.length - 1)
+        if (this.state.position === this.props.text.length - 1) {
+            document.getElementById('events').className = "visible";
             return;
+        }
+
 
         if (that.state.typing !== -1) {
             setTimeout(function () {

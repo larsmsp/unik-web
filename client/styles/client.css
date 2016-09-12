@@ -107,18 +107,40 @@ body {
     font-size: 36px;
 }
 
-.events {
+#events {
     display: flex;
     flex-direction: row;
     font-size: 1em;
+    visibility: hidden;
 }
-.events > .event {
+
+#events.visible {
+    visibility: visible;
+    transform: translateY(1000%);  /* make things invisible upon start */
+    -webkit-animation:translate-Y ease-in-out 1;  /* call our keyframe named translate-Y, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:translate-Y ease-in-out 1;
+    animation:translate-Y ease-in-out 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    animation-duration:3s;
+}
+
+@-webkit-keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
+@-moz-keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
+@keyframes translate-Y { from { transform:translateY(200%) } to { transform:translateY(0%) } }
+
+#events > .event {
     flex: 1 1 auto;
     padding-right: 32px;
     padding-left: 32px;
 }
 
-.events h4 {
+#events h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
 }
