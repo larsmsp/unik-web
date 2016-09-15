@@ -18,6 +18,7 @@ var AnimateContest = React.createClass({
         }
     },
     changePosition: function () {
+
         var that = this;
 
         if (this.state.position === this.props.text.length - 1) {
@@ -26,7 +27,7 @@ var AnimateContest = React.createClass({
         }
 
 
-        if (that.state.typing !== -1) {
+        if (this.state.typing !== -1) {
             setTimeout(function () {
                 that.setState({
                     typing: -1,
@@ -43,9 +44,6 @@ var AnimateContest = React.createClass({
             });
         }
     },
-    componentWillMount: function (data) {
-        console.log("Mounted", data);
-    },
     render: function () {
         return React.createElement('div', '&nbsp;',
             React.createElement(TypeWriter, {
@@ -58,7 +56,6 @@ var AnimateContest = React.createClass({
         )
     }
 });
-
 
 ReactDOM.render(
     React.createElement(AnimateContest),

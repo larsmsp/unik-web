@@ -77,6 +77,14 @@ body {
     max-height: 100px;
 }
 
+#leaderboardTable {
+    margin-top: 32px;
+    font-size: 2em;
+    color: white;
+    width: 100%;
+    padding: 32px;
+}
+
 .inverted {
     color: #fff;
 }
@@ -182,6 +190,16 @@ blockquote {
     -moz-border-radius: 0;
     border-radius: 0;
 }
+
 .grey-wrapper {
     background: #f1f1f1;
+}
+
+.btn-call-to-action {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }

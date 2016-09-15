@@ -11,7 +11,7 @@ var Badge = React.createClass({
   render: function() {
     return React.createElement('div', {className: 'col-sm-6 col-md-3 badge-wrapper'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
-        // React.createElement('img', {src: this.props.image}),
+        React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
         React.createElement('h4', null, '#', this.props.hashtag),
         React.createElement('h4', null, React.createElement('span', {className: 'text-success'}, this.props.value, ' poeng')),
         React.createElement('p', null, this.props.description)
