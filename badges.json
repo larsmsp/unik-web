@@ -31,14 +31,11 @@
         {"name": "Quick and Dirty", "hashtag": "quick_and_dirty", "value": 100, "description": "Fikse noe med stygg hack. But, hey, it works", "category": "Programmering", "image": "images/badges/nyan-cat-badge.png"},
         {"name": "Multilingual", "hashtag": "multilingual", "value": 100, "description": "Fire eller fler programmeringsspråk i løsningen", "category": "Programmering", "image": "images/badges/nyan-cat-badge.png"},
         {"name": "Language elitist", "hashtag": "language_elitist", "value": 1000, "description": "Tildeles til det laget som til en hver tid benytter flest ulike programmeringsspråk i løsningen. Markup-språk som json, xml, html og css teller ikke. (Vandremerke)", "category": "Programmering", "image": "images/badges/language-elitist.png"},
-        {"name": "Fort Knox", "hashtag": "fort_knox", "value": 1000, "description": "Supersikker løsning", "category": "Sikkerhets", "image": "images/badges/fort-knox.png"},
-        {"name": "Ports Wide Open", "hashtag": "ports_wide_open", "value": 500, "description": "Sikkerhetshull av dimensjoner (negativ verdi)", "category": "Sikkerhets", "image": "images/badges/nyan-cat-badge.png"},
+        {"name": "Fort Knox", "hashtag": "fort_knox", "value": 1000, "description": "Supersikker løsning", "category": "Sikkerhet", "image": "images/badges/fort-knox.png"},
+        {"name": "Ports Wide Open", "hashtag": "ports_wide_open", "value": 500, "description": "Sikkerhetshull av dimensjoner (negativ verdi)", "category": "Sikkerhet", "image": "images/badges/nyan-cat-badge.png"},
         {"name": "Shiny!", "hashtag": "shiny", "value": 100, "description": "Vanvittig skinnende og glossy løsning. Smooth!", "category": "UX", "image": "images/badges/nyan-cat-badge.png"},
         {"name": "Super useful", "hashtag": "super_useful", "value": 500, "description": "En løsning som har nytte for brukeren. Super useful! Great job!", "category": "UX", "image": "images/badges/nyan-cat-badge.png"}
     ],
 
     "PERPETUAL_BADGES": ["king_of_the_hill", "language_elitist"]
 }
-
-
-
