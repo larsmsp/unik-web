@@ -11,7 +11,7 @@ var Badge = React.createClass({
   render: function() {
     return React.createElement('div', {className: 'col-sm-6 col-md-3 badge-wrapper'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
-        React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
+        this.props.image && React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
         React.createElement('h4', null, '#', this.props.hashtag),
         React.createElement('h4', null, React.createElement('span', {className: 'text-success'}, this.props.value, ' poeng')),
         React.createElement('p', null, this.props.description)
@@ -22,7 +22,7 @@ var Badge = React.createClass({
 
 var BadgeRow = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'row'},
+    return React.createElement('div', {className: 'flex-row'},
       this.props.badges.map(function (badge) {
         return React.createElement(Badge, badge);
       })
@@ -63,18 +63,17 @@ var groupByCategory = (badges) => {
   if (badges.length <= 0) {
     return []
   }
-
-  return [badges.filter((badge) => badge.category === badges[0].category)]
-    .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category))).sort(function (a, b) {
-    if (a.points > b.points) {
-      return 1;
-    }
-    if (a.points < b.points) {
+  badges = badges.sort((a,b) => {
+    if (a.value > b.value) {
       return -1;
+    } else if (a.value < b.value) {
+      return 1;
+    } else {
+      return 0;
     }
-    // a must be equal to b
-    return 0;
-  });;
+  });
+  return [badges.filter((badge) => badge.category === badges[0].category)]
+    .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category)));
 };
 
 socket.on('display:badges', function (badges) {

@@ -203,3 +203,13 @@ blockquote {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.badge-wrapper {
+    align-self: flex-start;
+}
