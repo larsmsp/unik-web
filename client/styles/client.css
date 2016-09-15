@@ -87,11 +87,15 @@ body {
     text-transform: uppercase;
 }
 
-.description h2 > i {
+h2 > i {
     margin-right: 16px;
-    color: #D0021B;
     font-size: 125%;
 }
+
+.description h2 > i {
+    color: #D0021B;
+}
+
 .description h2 {
     vertical-align: middle;
 }
