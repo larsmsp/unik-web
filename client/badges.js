@@ -9,7 +9,7 @@ var divideIntoRows = function (array, rowSize) {
 
 var Badge = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'col-sm-6 col-md-3 badge-wrapper'},
+    return React.createElement('div', {className: 'col-sm-6 col-md-3 col-xs-12 text-center'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
         this.props.image && React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
         React.createElement('h4', null, '#', this.props.hashtag),
@@ -22,7 +22,7 @@ var Badge = React.createClass({
 
 var BadgeRow = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'flex-row'},
+    return React.createElement('div', {className: 'row'},
       this.props.badges.map(function (badge) {
         return React.createElement(Badge, badge);
       })

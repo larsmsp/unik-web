@@ -156,7 +156,7 @@ h2 > i {
 @keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
 
 #events > .event {
-    flex: 1 1 auto;
+    /*flex: 1 1 auto;*/
     padding-right: 32px;
     padding-left: 32px;
 }
@@ -212,4 +212,23 @@ blockquote {
 
 .badge-wrapper {
     align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+
+    h4 {
+        font-size: 24px;
+    }
+    body {
+        font-size: 18px;
+    }
+
+    #leaderboardTable {
+        margin-top: 32px;
+        font-size: 1em;
+        color: white;
+        width: 100%;
+        padding: 32px;
+        word-break: break-all;
+    }
 }
