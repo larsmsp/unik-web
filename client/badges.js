@@ -32,7 +32,6 @@ var BadgeRow = React.createClass({
 
 var Badges = React.createClass({
   render: function() {
-    console.log(this.props.badges);
     var badgeRows = divideIntoRows(this.props.badges, 4);
     return React.createElement('div', null,
       badgeRows.map(function (badgeRow) {
