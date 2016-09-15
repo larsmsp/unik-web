@@ -28,38 +28,19 @@
     </video>
     <div class="overlay">
         <div class="container-fluid" id="navbar"></div>
-        <div class="container">
+        <div class="container contest">
             <div class="header">
                 <h1 class="inverted logo-contest">
                     <img src="images/iot-utfordringen.png">
                     <span>IoT Utfordringen</span>
                 </h1>
             </div>
-            <div class="content-teaser" id="contest-info"></div>
-            <div id="events">
-                <div class="event">
-                    <h4 class="inverted">UiO</h4>
-                    <p class="inverted">22. september<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">UiB</h4>
-                    <p class="inverted">12. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">NTNU</h4>
-                    <p class="inverted">20. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">UiT</h4>
-                    <p class="inverted">11. november<br>kl. 16.00</p>
+            <div id="leaderboard"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="leaderboardTable"></div>
                 </div>
             </div>
-            <div class="scroll-helper">
-                <a class="scroll-round" href="#description">
-                    <i class="fa fa-2x fa-angle-down"></i>
-                </a>
-            </div>
-
         </div>
     </div>
 </div>
@@ -137,6 +118,6 @@
 
 <script type="text/javascript" src="navbar.js"></script>
 <script type="text/javascript" src="badges.js"></script>
-<script type="text/javascript" src="typewriter.js"></script>
+<script type="text/javascript" src="leaderboard.js"></script>
 </body>
 </html>

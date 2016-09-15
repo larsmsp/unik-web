@@ -56,6 +56,10 @@ body {
     padding-bottom: 50px;
 }
 
+.flex-header .container.contest {
+    padding-top: 0;
+}
+
 .description {
     margin-top: 32px;
     padding-top: 32px;

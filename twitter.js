@@ -72,8 +72,16 @@ var teamScoreFromTweets = (confirmedTweets, team) =>
         .map(badge => badge.value)
         .reduce((sum, point) => sum + point, 0);
 
+var badgeNameFromTweets = (confirmedTweets, team) =>
+    tweetsWithHashtag(confirmedTweets, team.hashtag)
+        .map(tweet => badgeFromTweet(tweet))
+        .map(badge => badge.name);
+
+
 var updateTeamScore = (confirmedTweets, team) => {
+    team.badges = badgeNameFromTweets(confirmedTweets, team);
     team.points = teamScoreFromTweets(confirmedTweets, team);
+    console.log(team.badges);
     return team;
 };
 
