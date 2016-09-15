@@ -1,76 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>UNIK</title>
+<head>
+  <title>UNIK</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="styles/client.css" rel="stylesheet">
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-  <body id="unikon">
-    <script src="socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 
-    <div id="navbar"></div>
+  <link href="styles/client.css" rel="stylesheet">
 
-    <!--<div class="jumbotron">
-      <div class="container">
-        <h1 class="inverted">UNIK</h1>
-        <p class="inverted">Universitetskonkurransen hvor vi leker med IoT</p>
+  <script src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+  <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
+
+</head>
+
+<body id="unikon">
+<script src="socket.io/socket.io.js"></script>
+
+<div class="flex-header video-holder">
+  <video class="video-background" autoplay loop poster="images/red-background.png" id="vid">
+    <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
+    <source src="videos/tech-1.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <div class="container-fluid" id="navbar"></div>
+    <div class="container">
+      <div class="header">
+        <h1 class="inverted logo-contest">
+          <img src="images/iot-utfordringen.png">
+          <span>IoT Utfordringen</span>
+        </h1>
+      </div>
+      <header class="text-center inverted">
+        <h2>Hvilke merker kan man vinne?</h2>
+      </header>
+      <div class="scroll-helper">
+        <a class="scroll-round" href="#description">
+          <i class="fa fa-2x fa-angle-down"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container description">
+  <div class="row">
+    <div class="col-md-6">
+      <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
+      <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
+      <blockquote>
+        <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
+        <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
+        </cite>
+      </blockquote>
+      <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
+      <br>
+      <p><strong>Lykke til!</strong></p>
+    </div>
+
+    <!--<div class="row">
+      <div class="col-md-12">
+        <h2>Fem timer</h2>
+        <p>
+  Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en kaffetrakter og folketellingen fra 1910? Hva med gyroskop og en høyttaler? Alt er lov! Løsningen lages at et lag på 3-4 personer.
+        </p>
+        <p>
+  Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>En løsning</h2>
+        <p>
+  Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen merker (badges, doh!) der noe annet er spesifisert. Bruk ting vi har tatt med, eller ta gjerne med dingser hjemmefra. Vi oppfordrer dere også til å inkludere data fra eksterne kilder (f.eks. <a href="http://data.norge.no/">data.norge.no</a>, eller <a href="https://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra interessant løsning.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Vinn merker...</h2>
+        <p>
+  Underveis i konkurransen kan man vinne merker. Merker gir poeng. Poeng trenger du for å vinne. Noen merker kan vinnes av flere team, mens andre merker vandrer mellom det laget som til en hver tid har løsningen som passer best med merkebeskrivelsen. For å få tildelt et merke må man demonstrere funksjonaliteten for en av veilederene.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>...Og de andre deltakernes annerkjennelse!</h2>
+        <p>
+  Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på hverandres løsninger. Hver stemme er verdt 50 poeng. Du kan ikke stemme på din egen løsning. Vinneren er den som til slutt står igjen med flest poeng fra både merker og stemmer.
+        </p>
       </div>
     </div>-->
 
-    <div class="container">
-      <!--<div class="row">
-        <div class="col-md-12">
-          <h2>Fem timer</h2>
-          <p>
-Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en kaffetrakter og folketellingen fra 1910? Hva med gyroskop og en høyttaler? Alt er lov! Løsningen lages at et lag på 3-4 personer.
-          </p>
-          <p>
-Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>En løsning</h2>
-          <p>
-Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen merker (badges, doh!) der noe annet er spesifisert. Bruk ting vi har tatt med, eller ta gjerne med dingser hjemmefra. Vi oppfordrer dere også til å inkludere data fra eksterne kilder (f.eks. <a href="http://data.norge.no/">data.norge.no</a>, eller <a href="https://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra interessant løsning.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Vinn merker...</h2>
-          <p>
-Underveis i konkurransen kan man vinne merker. Merker gir poeng. Poeng trenger du for å vinne. Noen merker kan vinnes av flere team, mens andre merker vandrer mellom det laget som til en hver tid har løsningen som passer best med merkebeskrivelsen. For å få tildelt et merke må man demonstrere funksjonaliteten for en av veilederene.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h2>...Og de andre deltakernes annerkjennelse!</h2>
-          <p>
-Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på hverandres løsninger. Hver stemme er verdt 50 poeng. Du kan ikke stemme på din egen løsning. Vinneren er den som til slutt står igjen med flest poeng fra både merker og stemmer.
-          </p>
-        </div>
-      </div>-->
+    <div id="badges"></div>
+    <div id="badgesGrid"></div>
 
-      <br>
-      <div id="badges"></div>
-      <div id="badgesGrid"></div>
-      <hr>
+  </div>
 
-      <footer>
-        <div class="container text-center">
-          <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam &nbsp;|&nbsp; Teodor</h4>
-        </div>
-      </footer>
+  <footer>
+    <div class="container text-center">
+      <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam
+        &nbsp;|&nbsp; Teodor</h4>
     </div>
-
-    <script type="text/javascript" src="navbar.js"></script>
-    <script type="text/javascript" src="badges.js"></script>
-  </body>
+  </footer>
+</div>
+<script type="text/javascript" src="navbar.js"></script>
+<script type="text/javascript" src="badges.js"></script>
+</body>
 </html>
