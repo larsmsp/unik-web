@@ -65,7 +65,16 @@ var groupByCategory = (badges) => {
   }
 
   return [badges.filter((badge) => badge.category === badges[0].category)]
-    .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category)));
+    .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category))).sort(function (a, b) {
+    if (a.points > b.points) {
+      return 1;
+    }
+    if (a.points < b.points) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });;
 };
 
 socket.on('display:badges', function (badges) {
