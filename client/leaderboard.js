@@ -11,7 +11,7 @@ var LeaderboardItem = React.createClass({
 
 var LeaderboardTable = React.createClass({
     render: function () {
-        return React.createElement('table', {className: 'table'},
+        return React.createElement('table', {className: 'table table-responsive'},
             React.createElement('thead', null,
                 React.createElement('tr', null,
                     React.createElement('th', null, 'Lag'),

@@ -81,7 +81,6 @@ var badgeNameFromTweets = (confirmedTweets, team) =>
 var updateTeamScore = (confirmedTweets, team) => {
     team.badges = badgeNameFromTweets(confirmedTweets, team);
     team.points = teamScoreFromTweets(confirmedTweets, team);
-    console.log(team.badges);
     return team;
 };
 
