@@ -77,6 +77,11 @@ body {
     max-height: 100px;
 }
 
+h4 {
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
 #leaderboardTable {
     margin-top: 32px;
     font-size: 2em;
@@ -156,7 +161,7 @@ h2 > i {
 @keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
 
 #events > .event {
-    flex: 1 1 auto;
+    /*flex: 1 1 auto;*/
     padding-right: 32px;
     padding-left: 32px;
 }
@@ -202,4 +207,33 @@ blockquote {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.badge-wrapper {
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+
+    h4 {
+        font-size: 24px;
+    }
+    body {
+        font-size: 18px;
+    }
+
+    #leaderboardTable {
+        margin-top: 32px;
+        font-size: 1em;
+        color: white;
+        width: 100%;
+        padding: 32px;
+        word-break: break-all;
+    }
 }

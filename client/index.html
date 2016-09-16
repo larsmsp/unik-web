@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>UNIK</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>IoT Utfordringen | Computas</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -27,7 +31,7 @@
         <source src="videos/tech-1.mp4" type="video/mp4">
     </video>
     <div class="overlay">
-        <div class="container-fluid" id="navbar"></div>
+        <div class="container-fluid hidden-sm hidden-xs" id="navbar"></div>
         <div class="container">
             <div class="header">
                 <h1 class="inverted logo-contest">
@@ -36,34 +40,53 @@
                 </h1>
             </div>
             <div class="content-teaser" id="contest-info"></div>
-            <div id="events">
-                <div class="event">
-                    <h4 class="inverted">UiO</h4>
-                    <p class="inverted">22. september<br>kl. 16.00</p>
+            <div class="hidden-xs hidden-sm">
+                <div id="events">
+                    <div class="event col-md-3 col-sm-6">
+                        <h4 class="inverted">UiO</h4>
+                        <p class="inverted">22. september<br>kl. 16.00</p>
+                    </div>
+                    <div class="event col-md-3 col-sm-6">
+                        <h4 class="inverted">UiB</h4>
+                        <p class="inverted">12. oktober<br>kl. 16.00</p>
+                    </div>
+                    <div class="event col-md-3 col-sm-6">
+                        <h4 class="inverted">NTNU</h4>
+                        <p class="inverted">20. oktober<br>kl. 16.00</p>
+                    </div>
+                    <div class="event col-md-3 col-sm-6">
+                        <h4 class="inverted">UiT</h4>
+                        <p class="inverted">11. november<br>kl. 16.00</p>
+                    </div>
                 </div>
-                <div class="event">
-                    <h4 class="inverted">UiB</h4>
-                    <p class="inverted">12. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">NTNU</h4>
-                    <p class="inverted">20. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">UiT</h4>
-                    <p class="inverted">11. november<br>kl. 16.00</p>
-                </div>
-            </div>
-            <div class="scroll-helper">
-                <a class="scroll-round" href="#description">
-                    <i class="fa fa-2x fa-angle-down"></i>
-                </a>
             </div>
         </div>
     </div>
 </div>
 
+<section class="container description visible-sm visible-xs">
+    <div class="row">
+        <div class="event col-xs-6 col-sm-6 text-center">
+            <h4>UiO</h4>
+            <p>22. september<br>kl. 16.00</p>
+        </div>
+        <div class="event col-xs-6 col-sm-6 text-center">
+            <h4>UiB</h4>
+            <p>12. oktober<br>kl. 16.00</p>
+        </div>
+        <div class="event col-xs-6 col-sm-6 text-center">
+            <h4>NTNU</h4>
+            <p>20. oktober<br>kl. 16.00</p>
+        </div>
+        <div class="event col-xs-6 col-sm-6 text-center">
+            <h4>UiT</h4>
+            <p>11. november<br>kl. 16.00</p>
+        </div>
+    </div>
+</section>
+
 <section class="container description" id="description">
+
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <h2><i class="fa fa-clock-o"></i><span>Fem timer</span></h2>
@@ -132,7 +155,7 @@
     </section>
 </div>
 
-<section class="container description">
+<section class="container description hidden-sm hidden-xs">
     <div class="row">
         <div class="event col-md-3 col-sm-6 text-center">
             <h4>UiO</h4>

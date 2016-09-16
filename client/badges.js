@@ -9,9 +9,9 @@ var divideIntoRows = function (array, rowSize) {
 
 var Badge = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'col-sm-6 col-md-3 badge-wrapper'},
+    return React.createElement('div', {className: 'col-sm-6 col-md-3 col-xs-12 text-center'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
-        React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
+        this.props.image && React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
         React.createElement('h4', null, '#', this.props.hashtag),
         React.createElement('h4', null, React.createElement('span', {className: 'text-success'}, this.props.value, ' poeng')),
         React.createElement('p', null, this.props.description)
@@ -63,7 +63,15 @@ var groupByCategory = (badges) => {
   if (badges.length <= 0) {
     return []
   }
-
+  badges = badges.sort((a,b) => {
+    if (a.value > b.value) {
+      return -1;
+    } else if (a.value < b.value) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
   return [badges.filter((badge) => badge.category === badges[0].category)]
     .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category)));
 };

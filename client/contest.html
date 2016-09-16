@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>UNIK</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNIK</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 
-    <link href="styles/client.css" rel="stylesheet">
+  <link href="styles/client.css" rel="stylesheet">
 
-    <script src="socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 
-    <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
+  <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
 
 </head>
 
 <body id="unikon">
 
 <div class="flex-header video-holder">
-    <video class="video-background" autoplay loop poster="images/red-background.png" id="vid">
-        <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
-        <source src="videos/tech-1.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-        <div class="container-fluid" id="navbar"></div>
-        <div class="container contest">
-            <div class="header">
-                <h1 class="inverted logo-contest">
-                    <img src="images/iot-utfordringen.png">
-                    <span>IoT Utfordringen</span>
-                </h1>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="leaderboardTable"></div>
-                </div>
-            </div>
+  <video class="video-background" autoplay loop poster="images/red-background.png" id="vid">
+    <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
+    <source src="videos/tech-1.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <div class="container-fluid" id="navbar"></div>
+    <div class="container contest">
+      <div class="header">
+        <h1 class="inverted logo-contest">
+          <img src="images/iot-utfordringen.png">
+          <span>IoT Utfordringen</span>
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="leaderboardTable"></div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <section class="container description" id="description">
-    <div class="row">
-        <div class="col-md-6">
-            <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
-            <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
-            <blockquote>
-                <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
-                <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
-                </cite>
-            </blockquote>
-            <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
-            <br>
-            <p><strong>Lykke til!</strong></p>
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <h2><i class="fa fa-certificate"></i>Retweet = Poeng</h2>
-            <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen, retweeter vi dere for å gi dere merket.</p>
-
-            <p>
-                PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker er ekstra
-                vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash;  er de verdt ekstra poeng.
-            </p>
-        </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
+      <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
+      <blockquote>
+        <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
+        <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
+        </cite>
+      </blockquote>
+      <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
     </div>
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-certificate"></i>Retweet = Poeng</h2>
+      <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen, retweeter vi
+        dere for å gi dere merket.</p>
+
+      <p>
+        PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker er ekstra
+        vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash; er de verdt ekstra poeng.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="grey-wrapper">
-    <div class="container description text-center">
-        <div class="col-md-6 col-md-offset-3 col-sm-12">
-            <h2><i class="fa fa-list-ol"></i>Hvilke merker kan vi vinne?</h2>
-            <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
-            <p><strong>Alle merkene er i listen under. Lykke til!</strong></p>
-        </div>
+  <div class="container description text-center">
+    <div class="col-md-6 col-md-offset-3 col-sm-12">
+      <h2><i class="fa fa-list-ol"></i>Hvilke merker kan vi vinne?</h2>
+      <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere
+        merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
+      <p><strong>Alle merkene er i listen under. Lykke til!</strong></p>
     </div>
+  </div>
 
 </section>
-
-<section class="container description">
-    <div class="row">
-        <div id="badges"></div>
-        <div id="badgesGrid"></div>
-    </div>
-</section>
-
-
 
 <section class="container description">
     <div id="badges"></div>
     <div id="badgesGrid"></div>
+</section>
+
+
+<section class="container description">
+  <div id="badges"></div>
+  <div id="badgesGrid"></div>
 </section>
 
 
