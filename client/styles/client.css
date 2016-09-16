@@ -36,7 +36,7 @@ body {
 .overlay {
     z-index: 1;
     position: relative;
-    background-color: rgba(208, 2, 27, 0.75);
+    background-color: rgba(18, 130, 155, 0.75);
 }
 
 .scroll-round {
@@ -110,7 +110,7 @@ h2 > i {
 }
 
 .description h2 > i {
-    color: #D0021B;
+    color: #993392;
 }
 
 .description h2 {
@@ -176,7 +176,7 @@ h2 > i {
 }
 
 blockquote {
-    border-color: #D0021B;
+    border-color: #993392;
 }
 
 .bg-alternate {
@@ -204,9 +204,11 @@ blockquote {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    border-color: #4d1a48;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    background: #993392;
 }
 
 .flex-row {

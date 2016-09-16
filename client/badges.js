@@ -64,10 +64,10 @@ var groupByCategory = (badges) => {
     return []
   }
   badges = badges.sort((a,b) => {
-    if (a.value > b.value) {
-      return -1;
-    } else if (a.value < b.value) {
+    if (Math.abs(a.value) > Math.abs(b.value)) {
       return 1;
+    } else if (Math.abs(a.value) < Math.abs(b.value)) {
+      return -1;
     } else {
       return 0;
     }
