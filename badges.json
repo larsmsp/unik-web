@@ -1,16 +1,11 @@
 {
     "BADGES": [
-        {"name": "Early bird", "hashtag": "earlybird", "value": 100, "description": "Få kontakt med din første device", "category": "Intro", "image": null},
-        {"name": "My senses are tingling", "hashtag": "my_senses_are_tingling", "value": 25, "description": "Få kontakt med SensorTag", "category": "Intro", "image": null},
-        {"name": "Moar powa!", "hashtag": "moar_powa", "value": 25, "description": "Få kontakt med Wall Plug", "category": "Intro", "image": null},
-        {"name": "Soundcheck", "hashtag": "soundcheck", "value": 25, "description": "Spill av en lyd fra høytaleren", "category": "Intro", "image": null},
-        {"name": "It's all connected!", "hashtag": "its_all_connected", "value": 100, "description": "Få to dingser til å kommunisere", "category": "Internet of Things", "image": null},
         {"name": "King of the Hill", "hashtag": "king_of_the_hill", "value": 1000, "description": "Tildeles den som har flest interagerende dingser (Vandremerke)", "category": "Internet of Things", "image": "images/badges/king-of-the-hill.png"},
         {"name": "Speaking Sensor", "hashtag": "speaking_sensor", "value": 100, "description": "Få en datamaskin til å lese opp data fra en sensor", "category": "Internet of Things", "image": null},
         {"name": "6th Sensor", "hashtag": "6th_sensor", "value": 100, "description": "Tatt i bruk alle sensorer på SensorTag", "category": "Internet of Things", "image": null},
         {"name": "IoT is a fad", "hashtag": "iot_is_a_fad", "value": 100, "description": "Lag en løsning uten noen sensorer eller devices", "category": "Internet of Things", "image": null},
-        {"name": "The Eye of Providence", "hashtag": "the_eye_of_providence", "value": 500, "description": "Lag en løsning som utløser en hendelse i hjemmet når en person kommer hjem (BONUS: 100 poeng om den kan oppfatte at en gjest kommer/er på besøk)", "category": "Internet of Things", "image": null},
         {"name": "Beer G33k", "hashtag": "beer_g33k", "value": 500, "description": "Lag løsning for fermentering av øl på stabil temperatur", "category": "Internet of Things", "image": "images/badges/beer-geek.png"},
+        {"name": "The Eye of Providence", "hashtag": "the_eye_of_providence", "value": 500, "description": "Lag en løsning som utløser en hendelse i hjemmet når en person kommer hjem (BONUS: 100 poeng om den kan oppfatte at en gjest kommer/er på besøk)", "category": "Internet of Things", "image": null},
         {"name": "Home DIY", "hashtag": "home_diy", "value": 1000, "description": "Digitaliser og automatiser hjemmet med et nettverk av dingser og hendelser", "category": "Internet of Things", "image": "images/badges/home-diy.png"},
         {"name": "Mirror, Mirror on The Wall...", "hashtag": "mirror_mirror_on_the_wall", "value": 100, "description": "Lag en skjerm (f.eks pad) som kan vise ting basert på hendelser i IoT-nettverket", "category": "Internet of Things", "image": null},
         {"name": "Useless Utility", "hashtag": "useless_utility", "value": 100, "description": "Noe sprøtt, kreativt og originalt, men helt unyttig", "category": "Internet of Things", "image": null},
@@ -34,7 +29,12 @@
         {"name": "Fort Knox", "hashtag": "fort_knox", "value": 1000, "description": "Supersikker løsning", "category": "Sikkerhet", "image": "images/badges/fort-knox.png"},
         {"name": "Ports Wide Open", "hashtag": "ports_wide_open", "value": -500, "description": "Sikkerhetshull av dimensjoner (negativ verdi)", "category": "Sikkerhet", "image": null},
         {"name": "Shiny!", "hashtag": "shiny", "value": 100, "description": "Vanvittig skinnende og glossy løsning. Smooth!", "category": "UX", "image": null},
-        {"name": "Super useful", "hashtag": "super_useful", "value": 500, "description": "En løsning som har nytte for brukeren. Super useful! Great job!", "category": "UX", "image": null}
+        {"name": "Super useful", "hashtag": "super_useful", "value": 500, "description": "En løsning som har nytte for brukeren. Super useful! Great job!", "category": "UX", "image": null},
+        {"name": "Early bird", "hashtag": "earlybird", "value": 100, "description": "Få kontakt med din første device", "category": "Intro", "image": null},
+        {"name": "My senses are tingling", "hashtag": "my_senses_are_tingling", "value": 25, "description": "Få kontakt med SensorTag", "category": "Intro", "image": null},
+        {"name": "Moar powa!", "hashtag": "moar_powa", "value": 25, "description": "Få kontakt med Wall Plug", "category": "Intro", "image": null},
+        {"name": "Soundcheck", "hashtag": "soundcheck", "value": 25, "description": "Spill av en lyd fra høytaleren", "category": "Intro", "image": null},
+        {"name": "It's all connected!", "hashtag": "its_all_connected", "value": 100, "description": "Få to dingser til å kommunisere", "category": "Internet of Things", "image": null}
     ],
 
     "PERPETUAL_BADGES": ["king_of_the_hill", "language_elitist"]
