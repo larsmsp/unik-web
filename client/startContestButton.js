@@ -9,7 +9,7 @@ var StartContestButton = React.createClass({
 
 socket.on('display:runningContest', function (runningContest) {
   var buttonProps = {
-    link: runningContest ? 'contest.html' : 'badges.html',
+    link: runningContest ? '/contest' : '/information',
     text: runningContest ? 'Jeg er klar!' : 'Jeg vil ha mer informasjon!'
   };
 

@@ -284,6 +284,10 @@ blockquote {
     text-align: center;
 }
 
+.badge-points--500 {
+    background: darkred;
+}
+
 .badge-points-25 {
     background: #555556;
 }

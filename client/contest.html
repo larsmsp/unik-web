@@ -33,10 +33,10 @@
     <div class="container-fluid" id="navbar"></div>
     <div class="container contest">
       <div class="header">
-        <h1 class="inverted logo-contest">
-          <img src="images/iot-utfordringen.png">
-          <span>IoT Utfordringen</span>
-        </h1>
+        <a href="/">
+          <img src="images/iot-utfordringen.svg" class="img-responsive logo-contest">
+          <h1 class="inverted sr-only">IOT-utfordringen</h1>
+        </a>
       </div>
       <div class="row">
         <div class="col-xs-12">
@@ -49,8 +49,9 @@
 
 <section class="container description" id="description">
   <div class="row">
-    <div class="col-md-6 col-sm-6">
-      <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
+    <a name="spilleregler"></a>
+    <div class="col-md-6 col-sm-6 marg-lg-b">
+      <h2><i class="fa fa-twitter"></i>Merker for Tweets</h2>
       <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
       <blockquote>
         <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
@@ -60,13 +61,12 @@
       <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
     </div>
     <div class="col-md-6 col-sm-6">
-      <h2><i class="fa fa-certificate"></i>Retweet = Poeng</h2>
-      <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen, retweeter vi
-        dere for å gi dere merket.</p>
+      <h2><i class="fa fa-certificate"></i>Poeng for Retweets</h2>
+      <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen, retweeter vi dere for å gi dere merket.</p>
 
       <p>
         PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker er ekstra
-        vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash; er de verdt ekstra poeng.
+        vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash;  er de verdt ekstra poeng.
       </p>
     </div>
   </div>
@@ -76,24 +76,50 @@
   <div class="container description text-center">
     <div class="col-md-6 col-md-offset-3 col-sm-12">
       <h2><i class="fa fa-list-ol"></i>Hvilke merker kan vi vinne?</h2>
-      <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere
-        merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
-      <p><strong>Alle merkene er i listen under. Lykke til!</strong></p>
+      <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
+      <p><strong>Alle merkene er i listen under.</strong></p>
     </div>
   </div>
-
 </section>
-
-<section class="container description">
-    <div id="badges"></div>
-    <div id="badgesGrid"></div>
-</section>
-
 
 <section class="container description">
   <div id="badges"></div>
   <div id="badgesGrid"></div>
 </section>
+
+<footer class="blue-wrapper footer">
+  <section class="container description no-margin">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <a href="http://www.computas.com">
+          <img src="images/computas-logo.svg" class="img-responsive logo-contest marg-lg-b">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Rustam Mehmandarov</h4>
+          <a class="inverted" href="https://twitter.com/rmehmandarov">@rmehmandarov</a>
+        </div>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Teodor Ande Elstad</h4>
+          <a class="inverted" href="https://twitter.com/_teodoran">@_teodoran</a>
+        </div>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Lars Martin S. Pedersen</h4>
+          <a class="inverted" href="https://github.com/larsmsp">@larsmsp</a>
+        </div>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Alexander Hoem Rosbach</h4>
+          <a class="inverted" href="https://www.linkedin.com/in/alexander-hoem-rosbach-b7686234">ahr</a>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <h4 class="inverted">Kristian S. Munkvold</h4>
+          <a class="inverted" href="https://twitter.com/realmunk">@realmunk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
 
 
 <script type="text/javascript" src="navbar.js"></script>
