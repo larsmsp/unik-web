@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UNIK</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -27,36 +30,17 @@
         <source src="videos/tech-1.mp4" type="video/mp4">
     </video>
     <div class="overlay">
-        <div class="container-fluid" id="navbar"></div>
+        <div class="container-fluid hidden-sm hidden-xs" id="navbar"></div>
         <div class="container">
-            <div class="header">
-                <h1 class="inverted logo-contest">
-                    <img src="images/iot-utfordringen.png">
-                    <span>IoT Utfordringen</span>
-                </h1>
-            </div>
-            <div class="content-teaser" id="contest-info"></div>
-            <div id="events">
-                <div class="event">
-                    <h4 class="inverted">UiO</h4>
-                    <p class="inverted">22. september<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">UiB</h4>
-                    <p class="inverted">12. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">NTNU</h4>
-                    <p class="inverted">20. oktober<br>kl. 16.00</p>
-                </div>
-                <div class="event">
-                    <h4 class="inverted">UiT</h4>
-                    <p class="inverted">11. november<br>kl. 16.00</p>
-                </div>
-            </div>
-            <div class="scroll-helper">
-                <a class="scroll-round" href="#description">
-                    <i class="fa fa-2x fa-angle-down"></i>
+            <section class="header text-center marg-lg-b">
+                <header>
+                    <img src="images/iot-utfordringen.svg" class="img-responsive logo-contest">
+                    <h1 class="inverted sr-only">IOT-utfordringen</h1>
+                </header>
+            </section>
+            <div class="text-center">
+                <a class="btn btn-lg btn-action" href="#spilleregler">
+                    Spilleregler
                 </a>
             </div>
         </div>
@@ -65,7 +49,8 @@
 
 <section class="container description" id="description">
     <div class="row">
-        <div class="col-md-6">
+        <a name="spilleregler"></a>
+        <div class="col-md-6 col-sm-6 marg-lg-b">
             <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
             <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
             <blockquote>
@@ -74,8 +59,6 @@
                 </cite>
             </blockquote>
             <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
-            <br>
-            <p><strong>Lykke til!</strong></p>
         </div>
         <div class="col-md-6 col-sm-6">
             <h2><i class="fa fa-certificate"></i>Retweet = Poeng</h2>
@@ -94,20 +77,10 @@
         <div class="col-md-6 col-md-offset-3 col-sm-12">
             <h2><i class="fa fa-list-ol"></i>Hvilke merker kan vi vinne?</h2>
             <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
-            <p><strong>Alle merkene er i listen under. Lykke til!</strong></p>
+            <p><strong>Alle merkene er i listen under.</strong></p>
         </div>
     </div>
-
 </section>
-
-<section class="container description">
-    <div class="row">
-        <div id="badges"></div>
-        <div id="badgesGrid"></div>
-    </div>
-</section>
-
-
 
 <section class="container description">
     <div id="badges"></div>

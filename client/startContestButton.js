@@ -1,7 +1,5 @@
 var socket = socket || io();
 
-// <a href="contest.html" class="btn btn-success btn-lg btn-call-to-action">Jeg er klar!</a>
-
 var StartContestButton = React.createClass({
   render: function () {
     return React.createElement('a', {href: this.props.link, className: 'btn btn-success btn-lg btn-call-to-action'}, this.props.text);
@@ -12,7 +10,7 @@ var StartContestButton = React.createClass({
 socket.on('display:runningContest', function (runningContest) {
   var buttonProps = {
     link: runningContest ? 'contest.html' : 'badges.html',
-    text: runningContest ? 'Jeg er klar!' : 'Les mer og se merkene du kan vinne.'
+    text: runningContest ? 'Jeg er klar!' : 'Jeg vil ha mer informasjon!'
   };
 
   ReactDOM.render(

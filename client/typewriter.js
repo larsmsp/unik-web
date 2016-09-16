@@ -13,8 +13,8 @@ var AnimateContest = React.createClass({
         return {
             typing: 1,
             position: 0,
-            minDelay: 100,
-            maxDelay: 100
+            minDelay: 25,
+            maxDelay: 50
         }
     },
     changePosition: function () {
@@ -34,13 +34,13 @@ var AnimateContest = React.createClass({
                     minDelay: 10,
                     maxDelay: 20
                 })
-            }, 500);
+            }, 750);
         } else {
             this.setState({
                 typing: 1,
                 position: that.state.position + 1,
-                minDelay: 100,
-                maxDelay: 200
+                minDelay: 25,
+                maxDelay: 50
             });
         }
     },

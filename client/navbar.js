@@ -10,8 +10,8 @@ var Navbar = React.createClass({
             React.createElement('div', {className: 'row'},
                 React.createElement('div', {className: 'col-xs-12'},
                     React.createElement('div', {className: 'navbar-header'},
-                        React.createElement('a', {className: 'navbar-brand', href: '/'},
-                            React.createElement('img', {className: 'header-logo', src: 'images/computas-logo.png'})),
+                        React.createElement('a', {className: 'navbar-brand', href: 'http://www.computas.com'},
+                            React.createElement('img', {className: 'header-logo', src: 'images/computas-logo.svg'})),
                         this.props.items.map(function (item) {
                             return React.createElement(NavbarItem, item);
                         })

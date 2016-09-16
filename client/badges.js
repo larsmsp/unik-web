@@ -9,14 +9,17 @@ var divideIntoRows = function (array, rowSize) {
 
 var Badge = React.createClass({
   render: function() {
-    return React.createElement('div', {className: 'col-sm-6 col-md-3 col-xs-12 text-center'},
+    return React.createElement('div', {className: 'col-sm-6 col-md-3 col-xs-12'},
       React.createElement('div', {className: 'thumbnail bg-alternate'},
-        this.props.image && React.createElement('img', {src: this.props.image, className: 'img-responsive' }),
-        React.createElement('h4', null, '#', this.props.hashtag),
-        React.createElement('h4', null, React.createElement('span', {className: 'text-success'}, this.props.value, ' poeng')),
+        this.props.image && React.createElement('img', {src: this.props.image, className: 'img-responsive marg-xs-b' }),
+        React.createElement('div', {className: 'row'},
+          React.createElement('div', {className: 'col-xs-8'},
+            React.createElement('h4', null, '#', this.props.hashtag)),
+          React.createElement('div', {className: 'col-xs-4'},
+            React.createElement('div', {className: 'badge-points badge-points-' + this.props.value}, this.props.value, ' poeng'))),
+        React.createElement('hr', null),
         React.createElement('p', null, this.props.description)
-      )
-    );
+      ));
   }
 });
 

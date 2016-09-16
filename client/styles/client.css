@@ -3,8 +3,12 @@ html, body {
 }
 
 body {
+    font-size: 18px;
     padding-top: 0px;
     padding-bottom: 20px;
+}
+h4 {
+    font-size: 24px;
 }
 
 #navbar, .navbar-inverse, .flex-header {
@@ -72,9 +76,9 @@ body {
     align-self:center;
 }
 
-.logo-contest img {
+.logo-contest {
     max-width: 100%;
-    max-height: 100px;
+    display: inline-block;
 }
 
 h4 {
@@ -142,23 +146,23 @@ h2 > i {
 
 #events.visible {
     visibility: visible;
-    transform: translateX(1000%);  /* make things invisible upon start */
-    -webkit-animation:translate-Y ease-in-out 1;  /* call our keyframe named translate-Y, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:translate-Y ease-in-out 1;
-    animation:translate-Y ease-in-out 1;
+    opacity: 0;
+    -webkit-animation:opacity ease-in-out 1;  /* call our keyframe named opacity, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:opacity ease-in-out 1;
+    animation:opacity ease-in-out 1;
 
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    animation-duration:2s;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
 }
 
-@-webkit-keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
-@-moz-keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
-@keyframes translate-Y { from { transform:translateX(1000%) } to { transform:translateX(0%) } }
+@-webkit-keyframes opacity { from { opacity: 0; } to { opacity: 1; } }
+@-moz-keyframes opacity { from { opacity: 0; } to { opacity: 1; } }
+@keyframes opacity { from { opacity: 0; } to { opacity: 1; } }
 
 #events > .event {
     /*flex: 1 1 auto;*/
@@ -183,21 +187,26 @@ blockquote {
 	background-color: #F9F9F9;
 }
 
-.badge-wrapper {
-    min-height: 180px;
-}
-
-.badge-wrapper .thumbnail {
-    padding: 20px;
+.thumbnail {
+    padding: 16px;
     vertical-align: middle;
-    text-align: center;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    min-height: 350px;
+
 }
 
 .grey-wrapper {
     background: #f1f1f1;
+}
+
+.purple-wrapper {
+    background: #993392;
+}
+
+.blue-wrapper {
+    background-color: rgba(18, 130, 155, 0.75);
 }
 
 .btn-call-to-action {
@@ -211,15 +220,86 @@ blockquote {
     background: #993392;
 }
 
+.btn-call-to-action:hover {
+    background: #993392;
+    border-color: #4d1a48;
+    border-radius: 25px;
+}
+
+.btn-call-to-action,
+.btn-call-to-action:hover,
+.btn-call-to-action:active,
+.btn-action,
+.btn-action:hover,
+.btn-action:active {
+    -webkit-transition: border-radius 0.5s ease-in-out;
+    -moz-transition: border-radius 0.5s ease-in-out;
+    -ms-transition: border-radius 0.5s ease-in-out;
+    -o-transition: border-radius 0.5s ease-in-out;
+    transition: border-radius 0.5s ease-in-out;
+}
+
+.btn-action {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    background: transparent;
+    color: white;
+}
+
+.btn-action:hover,
+.btn-action:active {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 50px;
+    border-color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    background: transparent;
+    color: white;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
     align-content: space-between;
 }
 
-.badge-wrapper {
-    align-self: flex-start;
+
+.thumbnail h4 {
+    font-size: 1em;
 }
+
+.badge-points {
+    padding: 4px 8px;
+    display: inline-block;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+}
+
+.badge-points-25 {
+    background: #555556;
+}
+
+.badge-points-100 {
+    background: #6E9EB3;
+}
+
+.badge-points-500 {
+    background: #07466D;
+}
+
+.badge-points-1000 {
+    background: #993392;
+}
+
 
 @media (max-width: 768px) {
 
@@ -238,4 +318,36 @@ blockquote {
         padding: 32px;
         word-break: break-all;
     }
+}
+
+footer a.inverted:hover {
+    color: white;
+}
+
+footer a.inverted {
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+footer.footer {
+    margin-top: 128px;
+}
+
+footer.footer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.marg-lg-b {
+    margin-bottom: 64px;
+}
+
+.marg-xs-b {
+    margin-bottom: 16px;
+}
+
+.no-margin {
+    margin-bottom: 0;
 }
