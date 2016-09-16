@@ -57,16 +57,17 @@ var BadgeCategoryTable = React.createClass({
 var CategorizedBadges = React.createClass({
   render: function () {
     return React.createElement('div', null,
-      this.props.badgesByCategory.map((badges) => React.createElement(BadgeCategoryTable, {badges: badges}))
+      this.props.badgesByCategory.map(function (badges) { return React.createElement(BadgeCategoryTable, {badges: badges}); })
     );
   }
 });
 
-var groupByCategory = (badges) => {
+var groupByCategory = function (badges) {
   if (badges.length <= 0) {
     return []
   }
-  badges = badges.sort((a,b) => {
+
+  badges = badges.sort(function (a,b) {
     if (Math.abs(a.value) > Math.abs(b.value)) {
       return 1;
     } else if (Math.abs(a.value) < Math.abs(b.value)) {
@@ -75,8 +76,9 @@ var groupByCategory = (badges) => {
       return 0;
     }
   });
-  return [badges.filter((badge) => badge.category === badges[0].category)]
-    .concat(groupByCategory(badges.filter((badge) => badge.category !== badges[0].category)));
+
+  return [badges.filter(function (badge) { return badge.category === badges[0].category })]
+    .concat(groupByCategory(badges.filter(function (badge) { return badge.category !== badges[0].category })));
 };
 
 socket.on('display:badges', function (badges) {
