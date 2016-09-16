@@ -1,117 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>UNIK</title>
+    <title>UNIK</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 
-  <link href="styles/client.css" rel="stylesheet">
+    <link href="styles/client.css" rel="stylesheet">
 
-  <script src="socket.io/socket.io.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 
-  <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
+    <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
 
 </head>
 
 <body id="unikon">
-<script src="socket.io/socket.io.js"></script>
 
 <div class="flex-header video-holder">
-  <video class="video-background" autoplay loop poster="images/red-background.png" id="vid">
-    <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
-    <source src="videos/tech-1.mp4" type="video/mp4">
-  </video>
-  <div class="overlay">
-    <div class="container-fluid" id="navbar"></div>
-    <div class="container">
-      <div class="header">
-        <h1 class="inverted logo-contest">
-          <img src="images/iot-utfordringen.png">
-          <span>IoT Utfordringen</span>
-        </h1>
-      </div>
-      <header class="text-center inverted">
-        <h2>Hvilke merker kan man vinne?</h2>
-      </header>
-      <div class="scroll-helper">
-        <a class="scroll-round" href="#description">
-          <i class="fa fa-2x fa-angle-down"></i>
-        </a>
-      </div>
-
+    <video class="video-background" autoplay loop id="vid">
+        <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
+        <source src="videos/tech-1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <div class="container-fluid" id="navbar"></div>
+        <div class="container">
+            <div class="header">
+                <h1 class="inverted logo-contest">
+                    <img src="images/iot-utfordringen.png">
+                    <span>IoT Utfordringen</span>
+                </h1>
+            </div>
+            <div class="content-teaser" id="contest-info"></div>
+            <div id="events">
+                <div class="event">
+                    <h4 class="inverted">UiO</h4>
+                    <p class="inverted">22. september<br>kl. 16.00</p>
+                </div>
+                <div class="event">
+                    <h4 class="inverted">UiB</h4>
+                    <p class="inverted">12. oktober<br>kl. 16.00</p>
+                </div>
+                <div class="event">
+                    <h4 class="inverted">NTNU</h4>
+                    <p class="inverted">20. oktober<br>kl. 16.00</p>
+                </div>
+                <div class="event">
+                    <h4 class="inverted">UiT</h4>
+                    <p class="inverted">11. november<br>kl. 16.00</p>
+                </div>
+            </div>
+            <div class="scroll-helper">
+                <a class="scroll-round" href="#description">
+                    <i class="fa fa-2x fa-angle-down"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<div class="container description">
-  <div class="row">
-    <div class="col-md-6">
-      <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
-      <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
-      <blockquote>
-        <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
-        <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
-        </cite>
-      </blockquote>
-      <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
-      <br>
-      <p><strong>Lykke til!</strong></p>
+<section class="container description" id="description">
+    <div class="row">
+        <div class="col-md-6">
+            <h2><i class="fa fa-twitter"></i>Tweet = Merke</h2>
+            <p>For å få tildelt et merke bruker dere twitter, f.eks.:</p>
+            <blockquote>
+                <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
+                <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
+                </cite>
+            </blockquote>
+            <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
+            <br>
+            <p><strong>Lykke til!</strong></p>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <h2><i class="fa fa-certificate"></i>Retweet = Poeng</h2>
+            <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen, retweeter vi dere for å gi dere merket.</p>
+
+            <p>
+                PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker er ekstra
+                vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash;  er de verdt ekstra poeng.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="grey-wrapper">
+    <div class="container description text-center">
+        <div class="col-md-6 col-md-offset-3 col-sm-12">
+            <h2><i class="fa fa-list-ol"></i>Hvilke merker kan vi vinne?</h2>
+            <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med seieren?</p>
+            <p><strong>Alle merkene er i listen under. Lykke til!</strong></p>
+        </div>
     </div>
 
-    <!--<div class="row">
-      <div class="col-md-12">
-        <h2>Fem timer</h2>
-        <p>
-  Hver gruppe har fem timer på å lage en løsning. En løsning kan være hva som helst. Vil du koble sammen en kaffetrakter og folketellingen fra 1910? Hva med gyroskop og en høyttaler? Alt er lov! Løsningen lages at et lag på 3-4 personer.
-        </p>
-        <p>
-  Man kan stille med lag, eller komme alene, og bli satt sammen med noen andre.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2>En løsning</h2>
-        <p>
-  Hver gruppe skal lage en løsning. Dvs. ikke mange småløsninger. Unntak for noen merker (badges, doh!) der noe annet er spesifisert. Bruk ting vi har tatt med, eller ta gjerne med dingser hjemmefra. Vi oppfordrer dere også til å inkludere data fra eksterne kilder (f.eks. <a href="http://data.norge.no/">data.norge.no</a>, eller <a href="https://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra interessant løsning.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Vinn merker...</h2>
-        <p>
-  Underveis i konkurransen kan man vinne merker. Merker gir poeng. Poeng trenger du for å vinne. Noen merker kan vinnes av flere team, mens andre merker vandrer mellom det laget som til en hver tid har løsningen som passer best med merkebeskrivelsen. For å få tildelt et merke må man demonstrere funksjonaliteten for en av veilederene.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2>...Og de andre deltakernes annerkjennelse!</h2>
-        <p>
-  Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på hverandres løsninger. Hver stemme er verdt 50 poeng. Du kan ikke stemme på din egen løsning. Vinneren er den som til slutt står igjen med flest poeng fra både merker og stemmer.
-        </p>
-      </div>
-    </div>-->
+</section>
 
+<section class="container description">
+    <div class="row">
+        <div id="badges"></div>
+        <div id="badgesGrid"></div>
+    </div>
+</section>
+
+
+
+<section class="container description">
     <div id="badges"></div>
     <div id="badgesGrid"></div>
+</section>
 
-  </div>
 
-  <footer>
-    <div class="container text-center">
-      <h4 class="text-muted">&nbsp; Alexander &nbsp;|&nbsp; Kristian &nbsp;|&nbsp; Lars Martin &nbsp;|&nbsp; Rustam
-        &nbsp;|&nbsp; Teodor</h4>
-    </div>
-  </footer>
-</div>
 <script type="text/javascript" src="navbar.js"></script>
 <script type="text/javascript" src="badges.js"></script>
 </body>
