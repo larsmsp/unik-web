@@ -77,6 +77,11 @@ body {
     max-height: 100px;
 }
 
+h4 {
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
 #leaderboardTable {
     margin-top: 32px;
     font-size: 2em;
