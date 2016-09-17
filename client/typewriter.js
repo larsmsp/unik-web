@@ -45,15 +45,12 @@ var AnimateContest = React.createClass({
         }
     },
     render: function () {
-        return React.createElement('div', '&nbsp;',
-            React.createElement(TypeWriter, {
-                typing: this.state.typing,
-                onTypingEnd: this.changePosition,
-                minDelay: this.state.minDelay,
-                maxDelay: this.state.maxDelay,
-                fixed: true
-            }, this.props.text[this.state.position])
-        )
+        return React.createElement(TypeWriter, {
+            typing: this.state.typing,
+            onTypingEnd: this.changePosition,
+            minDelay: this.state.minDelay,
+            maxDelay: this.state.maxDelay
+        }, this.props.text[this.state.position]);
     }
 });
 

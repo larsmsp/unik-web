@@ -2,7 +2,7 @@ var socket = socket || io();
 
 var StartContestButton = React.createClass({
   render: function () {
-    return React.createElement('a', {href: this.props.link, className: 'btn btn-success btn-lg btn-call-to-action'}, this.props.text);
+    return React.createElement('a', {href: this.props.link, className: 'btn btn-lg btn-call-to-action'}, this.props.text);
   }
 });
 
