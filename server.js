@@ -14,11 +14,11 @@ var express = require('express'),
 app.use('/', express.static('client'));
 
 app.get('/contest', function (req, res) {
-	res.sendfile('client/contest.html')
+	res.sendFile(__dirname + '/client/contest.html')
 });
 
 app.get('/information', function (req, res) {
-	res.sendfile('client/badges.html')
+	res.sendFile(__dirname + '/client/badges.html')
 });
 
 app.use('/node_modules', express.static('node_modules'));
