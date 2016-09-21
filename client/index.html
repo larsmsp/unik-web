@@ -1,219 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>IoT-utfordringen | Computas</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>IoT-utfordringen | Computas</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
 
-    <link href="styles/client.css" rel="stylesheet">
+  <link href="styles/client.css" rel="stylesheet">
 
-    <script src="socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 
-    <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
+  <script type="text/javascript" src="node_modules/react-typewriter/build/react-typewriter.js"></script>
 
 </head>
 
 <body id="unikon">
 
 <div class="flex-header video-holder">
-    <video class="video-background" autoplay loop id="vid">
-        <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
-        <source src="videos/tech-1.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-        <div class="container-fluid hidden-sm hidden-xs" id="navbar"></div>
-        <div class="container">
-            <section class="header text-center">
-                <header>
-                    <a href="/">
-                        <img src="images/iot-utfordringen.svg" class="img-responsive logo-contest">
-                        <h1 class="inverted sr-only">IOT-utfordringen</h1>
-                    </a>
-                </header>
-            </section>
-            <div class="content-teaser" id="contest-info"></div>
-            <div id="events">
-                <div class="text-center">
-                    <a class="btn btn-lg btn-action" href="#mer-om-arrangementet">
-                        Mer om arrangementet
-                    </a>
-                </div>
-            </div>
+  <video class="video-background" autoplay loop id="vid">
+    <source src="videos/tech-1-low.mp4" type="video/mp4" media="all and (max-width: 1024px)">
+    <source src="videos/tech-1.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <div class="container-fluid hidden-sm hidden-xs" id="navbar"></div>
+    <div class="container">
+      <section class="header text-center">
+        <header>
+          <a href="/">
+            <img src="images/iot-utfordringen.svg" class="img-responsive logo-contest">
+            <h1 class="inverted sr-only">IOT-utfordringen</h1>
+          </a>
+        </header>
+      </section>
+      <div class="content-teaser" id="contest-info"></div>
+      <div id="events">
+        <div class="text-center">
+          <a class="btn btn-lg btn-action" href="#mer-om-arrangementet">
+            Mer om arrangementet
+          </a>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <section class="container description">
-    <div class="row">
-        <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
-            <h4>UiO</h4>
-            <p>22. september<br>kl. 16.00</p>
-        </div>
-        <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
-            <h4>UiB</h4>
-            <p>12. oktober<br>kl. 16.00</p>
-        </div>
-        <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
-            <h4>NTNU</h4>
-            <p>20. oktober<br>kl. 16.00</p>
-        </div>
-        <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
-            <h4>UiT</h4>
-            <p>11. november<br>kl. 16.00</p>
-        </div>
+  <div class="row">
+    <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
+      <h4>UiO</h4>
+      <p>22. september<br>kl. 16.00</p>
     </div>
+    <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
+      <h4>UiB</h4>
+      <p>12. oktober<br>kl. 16.00</p>
+    </div>
+    <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
+      <h4>NTNU</h4>
+      <p>20. oktober<br>kl. 16.00</p>
+    </div>
+    <div class="event col-xs-6 col-sm-6 col-md-3 text-center">
+      <h4>UiT</h4>
+      <p>11. november<br>kl. 16.00</p>
+    </div>
+  </div>
 </section>
 
 
 <div class="grey-wrapper">
-    <section class="container description" id="description">
-        <a name="mer-om-arrangementet"></a>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 marg-lg-b">
-                <h2><i class="fa fa-clock-o"></i><span>Fem timer</span></h2>
-                <p>Vi setter opp lag og gir dere <em>fem timer</em> på å lage en IoT-løsning. Vi veileder underveis, og
-                    tar
-                    med utstyret dere trenger. Klar
-                    for å koble sammen en kaffetrakter og folketellingen fra 1910? Hva med et gyroskop og en høyttaler?
-                    <strong>Alt er lov.</strong></p>
-                <!--<p>Vi tar med alt dere trenger for å komme igang, inklusiv veiledning.</p>-->
-            </div>
-            <div class="col-sm-6 col-md-4 marg-lg-b">
-                <h2><i class="fa fa-flask"></i><span>En løsning</span></h2>
-                <p>Hver gruppe skal lage en løsning. Bruk ting vi har tatt med, eller ta med noe hjemmefra. Vi
-                    oppfordrer
-                    dere også til å inkludere data fra eksterne kilder (f.eks. <a
-                            href="http://data.norge.no/">data.norge.no</a>, eller <a
-                            href="http://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra nyttig løsning.
-                </p>
-            </div>
-            <div class="col-sm-6 col-md-4 marg-lg-b">
-                <h2><i class="fa fa-heart"></i>Poeng</h2>
-                <p>Underveis i konkurransen kan man vinne merker. Vi har gjort klar en rekke merker som gir poeng. De
-                    leder
-                    laget ditt nærmere og nærmere seieren. Noen av merkene kan vinnes av flere team, og de andre går sin
-                    seiersgang til de som har den beste løsningen.</p>
-            </div>
-            <div class="col-sm-6 col-md-6 col-md-offset-3">
-                <div class="visible-sm visible-xs">
-                    <h2><i class="fa fa-trophy"></i>Vinn En Heftig Premie</h2>
-                    <p>
-                        Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på
-                        hverandres
-                        løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er
-                        den
-                        som
-                        til slutt står igjen med flest poeng fra både merker og stemmer.
-                    </p>
-                </div>
-                <div class="text-center visible-md visible-lg">
-                    <h2><i class="fa fa-trophy"></i>Vinn En Heftig Premie</h2>
-                    <p>
-                        Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på
-                        hverandres
-                        løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er
-                        den
-                        som
-                        til slutt står igjen med flest poeng fra både merker og stemmer.
-                    </p>
-                </div>
-
-            </div>
+  <section class="container description" id="description">
+    <a name="mer-om-arrangementet"></a>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-clock-o"></i><span>Fem timer</span></h2>
+        <p>Vi setter opp lag og gir dere <em>fem timer</em> på å lage en IoT-løsning. Vi veileder underveis, og
+          tar
+          med utstyret dere trenger. Klar
+          for å koble sammen en kaffetrakter og folketellingen fra 1910? Hva med et gyroskop og en høyttaler?
+          <strong>Alt er lov.</strong></p>
+        <!--<p>Vi tar med alt dere trenger for å komme igang, inklusiv veiledning.</p>-->
+      </div>
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-flask"></i><span>En løsning</span></h2>
+        <p>Hver gruppe skal lage en løsning. Bruk ting vi har tatt med, eller ta med noe hjemmefra. Vi
+          oppfordrer
+          dere også til å inkludere data fra eksterne kilder (f.eks. <a
+              href="http://data.norge.no/">data.norge.no</a>, eller <a
+              href="http://labs.ruter.no/">labs.ruter.no</a>) for å lage en ekstra nyttig løsning.
+        </p>
+      </div>
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-heart"></i>Poeng</h2>
+        <p>Underveis i konkurransen kan man vinne merker. Vi har gjort klar en rekke merker som gir poeng. De
+          leder
+          laget ditt nærmere og nærmere seieren. Noen av merkene kan vinnes av flere team, og de andre går sin
+          seiersgang til de som har den beste løsningen.</p>
+      </div>
+      <div class="col-sm-6 col-md-6 col-md-offset-3">
+        <div class="visible-sm visible-xs">
+          <h2><i class="fa fa-trophy"></i>Vinn En Heftig Premie</h2>
+          <p>
+            Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på
+            hverandres
+            løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er
+            den
+            som
+            til slutt står igjen med flest poeng fra både merker og stemmer.
+          </p>
         </div>
-    </section>
+        <div class="text-center visible-md visible-lg">
+          <h2><i class="fa fa-trophy"></i>Vinn En Heftig Premie</h2>
+          <p>
+            Til slutt skal alle gruppene presentere sin løsning og alle de andre deltakerne stemmer på
+            hverandres
+            løsninger. Hver stemme er verdt 100 poeng. Du kan ikke stemme på din egen løsning. Vinneren er
+            den
+            som
+            til slutt står igjen med flest poeng fra både merker og stemmer.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </div>
 <section class="container description">
-    <div class="row">
-        <div class="col-md-6 col-sm-6">
-            <h2><i class="fa fa-twitter"></i>Merker for Tweets</h2>
-            <p>For å få tildelt et merke, tweeter man f.eks.:</p>
-            <blockquote>
-                <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
-                <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
-                </cite>
-            </blockquote>
-            <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <h2><i class="fa fa-certificate"></i>Poeng for Retweets</h2>
-            <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen,
-                retweeter vi dere for å gi dere merket.</p>
-
-            <p>
-                PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker
-                er ekstra
-                vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash; er de verdt ekstra
-                poeng.
-            </p>
-        </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-twitter"></i>Merker for Tweets</h2>
+      <p>For å få tildelt et merke, tweeter man f.eks.:</p>
+      <blockquote>
+        <p>#TeamAwesome vil ha #earlybird merket #iot_uio</p>
+        <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
+        </cite>
+      </blockquote>
+      <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
     </div>
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-certificate"></i>Poeng for Retweets</h2>
+      <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen,
+        retweeter vi dere for å gi dere merket.</p>
+
+      <p>
+        PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker
+        er ekstra
+        vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash; er de verdt ekstra
+        poeng.
+      </p>
+    </div>
+  </div>
 </section>
 
 <div class="grey-wrapper marg-lg-b">
-    <div class="description container">
-        <div class="col-md-6 col-md-offset-3 col-sm-6 marg-xs-b">
-            <div class="text-center visible-md visible-lg visible-sm">
-                <h2><i class="fa fa-list-ol"></i>Hvilke merker?</h2>
-                <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de
-                    vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med
-                    seieren?</p>
-            </div>
-            <div class="visible-xs">
-                <h2><i class="fa fa-list-ol"></i>Hvilke merker?</h2>
-                <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de
-                    vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med
-                    seieren?</p>
-            </div>
+  <div class="description container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-6 marg-xs-b">
+        <div class="text-center visible-md visible-lg visible-sm">
+          <h2><i class="fa fa-list-ol"></i>Hvilke merker?</h2>
+          <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de
+            vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med
+            seieren?</p>
         </div>
-        <div class="text-center">
-            <div id="startContestButton"></div>
+        <div class="visible-xs">
+          <h2><i class="fa fa-list-ol"></i>Hvilke merker?</h2>
+          <p>Satser dere på å vinne ved å stikke av med mange lette merker, eller går dere for et av de
+            vanskeligere merkene? Blir det publikumstemmene som gjør at deres løsning stikker av med
+            seieren?</p>
         </div>
+      </div>
+      </div>
+    <div class="row">
+      <div class="text-center">
+        <div id="startContestButton"></div>
+      </div>
     </div>
+  </div>
 </div>
 
 <footer class="blue-wrapper footer">
-    <section class="container description no-margin">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <a href="http://www.computas.com">
-                    <img src="images/computas-logo.svg" class="img-responsive logo-contest marg-lg-b">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="col-md-6 col-xs-12 marg-xs-b">
-                    <h4 class="inverted">Rustam Mehmandarov</h4>
-                    <a class="inverted" href="https://twitter.com/rmehmandarov">@rmehmandarov</a>
-                </div>
-                <div class="col-md-6 col-xs-12 marg-xs-b">
-                    <h4 class="inverted">Teodor Ande Elstad</h4>
-                    <a class="inverted" href="https://twitter.com/_teodoran">@_teodoran</a>
-                </div>
-                <div class="col-md-6 col-xs-12 marg-xs-b">
-                    <h4 class="inverted">Lars Martin S. Pedersen</h4>
-                    <a class="inverted" href="https://github.com/larsmsp">@larsmsp</a>
-                </div>
-                <div class="col-md-6 col-xs-12 marg-xs-b">
-                    <h4 class="inverted">Alexander Hoem Rosbach</h4>
-                    <a class="inverted" href="https://www.linkedin.com/in/alexander-hoem-rosbach-b7686234">ahr</a>
-                </div>
-                <div class="col-md-6 col-xs-12">
-                    <h4 class="inverted">Kristian S. Munkvold</h4>
-                    <a class="inverted" href="https://twitter.com/realmunk">@realmunk</a>
-                </div>
-            </div>
+  <section class="container description no-margin">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <a href="http://www.computas.com">
+          <img src="images/computas-logo.svg" class="img-responsive logo-contest marg-lg-b">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Rustam Mehmandarov</h4>
+          <a class="inverted" href="https://twitter.com/rmehmandarov">@rmehmandarov</a>
         </div>
-    </section>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Teodor Ande Elstad</h4>
+          <a class="inverted" href="https://twitter.com/_teodoran">@_teodoran</a>
+        </div>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Lars Martin S. Pedersen</h4>
+          <a class="inverted" href="https://github.com/larsmsp">@larsmsp</a>
+        </div>
+        <div class="col-md-6 col-xs-12 marg-xs-b">
+          <h4 class="inverted">Alexander Hoem Rosbach</h4>
+          <a class="inverted" href="https://www.linkedin.com/in/alexander-hoem-rosbach-b7686234">ahr</a>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <h4 class="inverted">Kristian S. Munkvold</h4>
+          <a class="inverted" href="https://twitter.com/realmunk">@realmunk</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </footer>
 
 <script type="text/javascript" src="navbar.js"></script>
