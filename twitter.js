@@ -2,9 +2,9 @@ var Twitter = require('twitter'),
     fs = require('fs'),
     CNST = require('./constants.js'),
 
-    usingTwitter = process.env.USING_TWITTER || false,
-    CONFIRM_TAG = process.env.CONFIRM_TAG || "confirmed",
-    contestTag = process.env.CONTEST_TAG || '#unik_test',
+    usingTwitter = process.env.USING_TWITTER || true,
+    CONFIRM_TAG = process.env.CONFIRM_TAG || "ok",
+    contestTag = process.env.CONTEST_TAG || '#iot_uio',
     client = {};
 
 if (usingTwitter) {
@@ -95,13 +95,25 @@ var updateAllTeamScores = (tweets, teams, callback) => {
 
 exports.updateAllTeamScores = (callback, err) => {
     if (usingTwitter) {
-        client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100}, (errors, tweets) => {
+
+        // 
+        client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100, max_id: '779010352025567200'}, (errors, tweets) => {
             if(errors){
                 console.log(errors);
             } else {
-                // Use if an update of test-data is desired:
-                //fs.writeFileSync('./twitter_test_data.json', JSON.stringify(tweets));
-                updateAllTeamScores(tweets.statuses, CNST.TEAMS, (teams) => callback(teams));
+                var stat1 = tweets.statuses;
+                client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100, since_id: '779010352025567200'}, (errors, tweets) => {
+                    if(errors){
+                        console.log(errors);
+                    } else {
+                        // Use if an update of test-data is desired:
+                        //fs.writeFileSync('./twitter_test_data.json', JSON.stringify(tweets));
+                        var stat2 = tweets.statuses;
+                        var allTweetStatuses = stat1.concat(stat2);
+
+                        updateAllTeamScores(allTweetStatuses, CNST.TEAMS, (teams) => callback(teams));
+                    }
+                })
             }
         });
     } else {
