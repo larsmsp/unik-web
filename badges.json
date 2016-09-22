@@ -17,7 +17,7 @@
         {"name": "Data Analyst", "hashtag": "data_analyst", "value": 100, "description": "Analysere, visualisere og se sammenhenger i data som finnes", "category": "Dataanalyse", "image": "images/badges/no_sticker.png"},
         {"name": "The Alchemist", "hashtag": "the_alchemist", "value": 1000, "description": "Bruke tilsynelatende ubrukelig data til noe veldig kult og nyttig (f.eks. mikrofon-keylogger", "category": "Dataanalyse", "image": "images/badges/the-alchemist.png"},
         {"name": "Leave no one behind", "hashtag": "leave_no_one_behind", "value": 100, "description": "Hjelpe andre teamene videre", "category": "Samarbeid", "image": "images/badges/no_sticker.png"},
-        {"name": "Team Team Spirit", "hashtag": "team_team_spirit", "value": 100, "description": "Kuleste laget som har en sjel eller identitet. Kan være like klær, hatter, tema for laget e.l.", "category": "Samarbeid", "image": "images/badges/no_sticker.png"},
+        {"name": "Team Team Spirit", "hashtag": "team_team_spirit", "value": 100, "description": "Kuleste laget som har en sjel eller identitet. Kan være like klær, hatter, tema for laget e.l. (Vandremerke)", "category": "Samarbeid", "image": "images/badges/no_sticker.png"},
         {"name": "Pull Request", "hashtag": "pull_request", "value": 100, "description": "Send minst en pull request til et open source prosjekt i løpet av konkurransen", "category": "Samarbeid", "image": "images/badges/no_sticker.png"},
         {"name": "Open Source", "hashtag": "open_source", "value": 100, "description": "Tilgjengeligjør koden du skriver og dokumentasjonen på en plattform for deling av åpen kildekode (f.eks. https://github.com", "category": "Samarbeid", "image": "images/badges/no_sticker.png"},
         {"name": "Git Together", "hashtag": "git_together", "value": 500, "description": "Dere bruker git eller lignende for å jobbe med kode innad i gruppen", "category": "Samarbeid", "image": "images/badges/git_together.png"},
@@ -37,5 +37,5 @@
         {"name": "It's all connected!", "hashtag": "its_all_connected", "value": 100, "description": "Få to dingser til å kommunisere", "category": "Internet of Things", "image": "images/badges/no_sticker.png"}
     ],
 
-    "PERPETUAL_BADGES": ["king_of_the_hill", "language_elitist"]
+    "PERPETUAL_BADGES": ["king_of_the_hill", "language_elitist", "team_team_spirit"]
 }
