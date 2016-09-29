@@ -2,7 +2,7 @@ var Twitter = require('twitter'),
     fs = require('fs'),
     CNST = require('./constants.js'),
 
-    usingTwitter = process.env.USING_TWITTER || true,
+    usingTwitter = process.env.USING_TWITTER || false,
     CONFIRM_TAG = process.env.CONFIRM_TAG || "ok",
     contestTag = process.env.CONTEST_TAG || '#iot_uio',
     client = {};
