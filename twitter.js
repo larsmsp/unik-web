@@ -183,9 +183,9 @@ var getAllTweets = (callback, error, noOfCalls, params, statuses) => {
         }
         
         statuses = statuses.concat(tweets.statuses);
-        params.max_id = minimumId(statuses);
-
+        
         if (tweets.statuses.length >= count) {
+            params.max_id = minimumId(statuses);
             getAllTweets(callback, error, noOfCalls + 1, params, statuses);
         }
         else {
