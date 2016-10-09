@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/teodoran/unik-web#readme",
   "dependencies": {
+    "big-integer": "^1.6.16",
     "express": "^4.13.4",
     "react-scroll": "^1.4.0",
     "react-typewriter": "^0.4.1",

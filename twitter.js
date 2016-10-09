@@ -1,13 +1,10 @@
 var Twitter = require('twitter'),
+    bigInt = require('big-integer'),
     fs = require('fs'),
     CNST = require('./constants.js'),
-
-    usingTwitter = process.env.USING_TWITTER || false,
-    CONFIRM_TAG = process.env.CONFIRM_TAG || "ok",
-    contestTag = process.env.CONTEST_TAG || '#iot_uio',
     client = {};
 
-if (usingTwitter) {
+if (CNST.USING_TWITTER) {
     client = new Twitter({
         consumer_key: process.env.CONSUMER_KEY,
         consumer_secret: process.env.CONSUMER_SECRET,
@@ -16,21 +13,58 @@ if (usingTwitter) {
     });
 }
 
+var copyHashtags = (hashtags) => {
+    if (hashtags.length <= 0) {
+        return [];
+    }
+    return hashtags.map((hashtag) => {
+        return {text: hashtag.text}
+    });
+};
+
+var copyTweet = (tweet) => {
+    return {
+        created_at: tweet.created_at || Date.now(),
+        id: tweet.id_str || "0",
+        entities: {
+            hashtags: copyHashtags(tweet.entities.hashtags)
+        },
+        in_reply_to_status_id: tweet.in_reply_to_status_id_str || "-1",
+        user: {
+            screen_name: tweet.user.screen_name || ''
+        }
+    };
+};
+
+var copyAllTweets = tweets => tweets.map(tweet => copyTweet(tweet));
+
 var tweetsWithHashtag = (tweets, hashtag) => {
     return tweets.filter(tweet => tweet.entities.hashtags.find(h => h.text.toLowerCase() === hashtag.toLowerCase()));
 };
 
-var allConfirmTweets = tweets => tweets.filter(tweet => {
-    return tweetsWithHashtag(tweets, CONFIRM_TAG)
+var allConfirmTweets = tweets => {
+    return tweetsWithHashtag(tweets, CNST.CONFIRM_TAG)
         .filter(tweet => CNST.ADMINS.find(admin => admin === tweet.user.screen_name));
-});
+};
 
-var badgeFromTweet = (tweet) => {
+var allBadgesFromTweet = (tweet) => {
     return CNST.BADGES.filter(badge =>
         tweet.entities.hashtags.find(hashtag =>
             hashtag.text.toLowerCase() === badge.hashtag.toLowerCase()
         )
-    ).shift();
+    );
+};
+
+var teamAndContestTagsFromTweet = (tweet) => {
+    return tweet.entities.hashtags.filter(hashtag =>
+        !CNST.BADGES.find(badge =>
+            hashtag.text.toLowerCase() === badge.hashtag.toLowerCase()
+        )
+    );
+};
+
+var badgeFromTweet = (tweet) => {
+    return allBadgesFromTweet(tweet).shift();
 };
 
 var allBadgeTweets = tweets => {
@@ -47,7 +81,7 @@ var allBadgeTweets = tweets => {
 
             var badgeTag = badge.hashtag,
                 isAlreadyClaimed = !perpetualBadgesAlreadyClaimed.has(badgeTag);
-
+            
             if (CNST.PERPETUAL_BADGES.find(perpetualBadge => perpetualBadge === badgeTag)) {
                 perpetualBadgesAlreadyClaimed.add(badgeTag);
             }
@@ -61,9 +95,38 @@ var allConfirmedTweets = (tweets) => {
     return tweets.filter(tweet => confirmTweets.find(confirmTweet => confirmTweet.in_reply_to_status_id === tweet.id));
 };
 
+var containsMoreThanOneBadge = (tweet) => {
+    return CNST.BADGES.filter(badge =>
+        tweet.entities.hashtags.filter(hashtag =>
+            hashtag.text.toLowerCase() === badge.hashtag.toLowerCase()
+        )
+    ).length > 1;
+};
+
+var duplicateTweetsWithMoreThanOneBadge = (tweets) => {
+    return tweets
+        .map((tweet) => {
+            var badges = allBadgesFromTweet(tweet);
+            if (badges.length <= 1) {
+                return [tweet];
+            }
+
+            return badges.map((badge) => {
+                var thisTweet = copyTweet(tweet);
+                thisTweet.entities.hashtags = teamAndContestTagsFromTweet(tweet).concat([{text: badge.hashtag}]);
+                return thisTweet;
+            });
+        })
+        .reduce(function(a, b) {
+            return a.concat(b);
+        }, []);
+};
+
 var allConfirmedBadgeTweets = (tweets) => {
-    var confirmedTweets = allConfirmedTweets(tweets);
-    return allBadgeTweets(confirmedTweets);
+    var confirmedTweets = allConfirmedTweets(tweets),
+        expanded = duplicateTweetsWithMoreThanOneBadge(confirmedTweets);
+
+    return allBadgeTweets(expanded);
 };
 
 var teamScoreFromTweets = (confirmedTweets, team) =>
@@ -93,31 +156,52 @@ var updateAllTeamScores = (tweets, teams, callback) => {
     callback(updatedTeams);
 };
 
-exports.updateAllTeamScores = (callback, err) => {
-    if (usingTwitter) {
+var minimumId = (tweets) => {
+    return tweets.map(tweet => bigInt(tweet.id_str).minus(1)).reduce((x, y) => {
+        if (x.lesser(y)) {
+            return x;
+        }
+        return y;
+    }).toString();
+};
 
-        // 
-        client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100, max_id: '779010352025567200'}, (errors, tweets) => {
-            if(errors){
-                console.log(errors);
-            } else {
-                var stat1 = tweets.statuses;
-                client.get('search/tweets', {q: contestTag, result_type: 'recent', count: 100, since_id: '779010352025567200'}, (errors, tweets) => {
-                    if(errors){
-                        console.log(errors);
-                    } else {
-                        // Use if an update of test-data is desired:
-                        //fs.writeFileSync('./twitter_test_data.json', JSON.stringify(tweets));
-                        var stat2 = tweets.statuses;
-                        var allTweetStatuses = stat1.concat(stat2);
+var getAllTweets = (callback, error, noOfCalls, params, statuses) => {
+    var count = 100,
+        error = error || console.log,
+        noOfCalls = noOfCalls || 1,
+        statuses = statuses || [],
+        params = params || {
+            q: CNST.CONTEST_TAG,
+            result_type: 'recent',
+            count: count
+        };
 
-                        updateAllTeamScores(allTweetStatuses, CNST.TEAMS, (teams) => callback(teams));
-                    }
-                })
-            }
-        });
-    } else {
+    client.get('search/tweets', params, (err, tweets) => {
+        if (err) {
+            error(err);
+            return;
+        }
+        
+        statuses = statuses.concat(tweets.statuses);
+        params.max_id = minimumId(statuses);
+
+        if (tweets.statuses.length >= count) {
+            getAllTweets(callback, error, noOfCalls + 1, params, statuses);
+        }
+        else {
+            callback(statuses, noOfCalls);
+        }
+    });
+};
+
+exports.updateAllTeamScores = (callback) => {
+    if (!CNST.USING_TWITTER) {
         var tweets = JSON.parse(fs.readFileSync('./twitter_test_data.json', 'UTF-8'));
-        updateAllTeamScores(tweets.statuses, CNST.TEAMS, (teams) => callback(teams))
+        updateAllTeamScores(copyAllTweets(tweets.statuses), CNST.TEAMS, (teams) => callback(teams, 1));
+        return;
     }
+
+    getAllTweets((statuses, noOfCalls) => {
+        updateAllTeamScores(copyAllTweets(statuses), CNST.TEAMS, (teams) => callback(teams, noOfCalls));
+    });
 };
