@@ -20,6 +20,10 @@ app.get('/information', function (req, res) {
 	res.sendFile(__dirname + '/client/badges.html')
 });
 
+app.get('/admin', function (req, res) {
+	res.sendFile(__dirname + '/client/admin.html')
+});
+
 app.use('/node_modules', express.static('node_modules'));
 
 io.on('connect', (socket) => {
