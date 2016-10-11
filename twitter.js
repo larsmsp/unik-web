@@ -103,8 +103,8 @@ var containsMoreThanOneBadge = (tweet) => {
     ).length > 1;
 };
 
-var duplicateTweetsWithMoreThanOneBadge = (tweets) => {
-    return tweets
+var duplicateTweetsWithMoreThanOneBadge = (tweets) =>
+    tweets
         .map((tweet) => {
             var badges = allBadgesFromTweet(tweet);
             if (badges.length <= 1) {
@@ -117,10 +117,7 @@ var duplicateTweetsWithMoreThanOneBadge = (tweets) => {
                 return thisTweet;
             });
         })
-        .reduce(function(a, b) {
-            return a.concat(b);
-        }, []);
-};
+        .reduce((a, b) => a.concat(b), [])
 
 var allConfirmedBadgeTweets = (tweets) => {
     var confirmedTweets = allConfirmedTweets(tweets),
@@ -129,21 +126,21 @@ var allConfirmedBadgeTweets = (tweets) => {
     return allBadgeTweets(expanded);
 };
 
-var teamScoreFromTweets = (confirmedTweets, team) =>
-    tweetsWithHashtag(confirmedTweets, team.hashtag)
-        .map(tweet => badgeFromTweet(tweet))
-        .map(badge => badge.value)
-        .reduce((sum, point) => sum + point, 0);
-
 var badgeNameFromTweets = (confirmedTweets, team) =>
     tweetsWithHashtag(confirmedTweets, team.hashtag)
         .map(tweet => badgeFromTweet(tweet))
-        .map(badge => badge.name);
+        .map(badge => badge.hashtag)
+        .filter((badge, index, self) => index == self.indexOf(badge))
 
+var teamScoreFromBadges = (badges) =>
+    badges
+        .map(badge => CNST.BADGES.find(b => b.hashtag.toLowerCase() === badge.toLowerCase()))
+        .map(badge => badge.value)
+        .reduce((sum, point) => sum + point, 0);
 
 var updateTeamScore = (confirmedTweets, team) => {
     team.badges = badgeNameFromTweets(confirmedTweets, team);
-    team.points = teamScoreFromTweets(confirmedTweets, team);
+    team.points = teamScoreFromBadges(team.badges);
     return team;
 };
 
@@ -156,14 +153,15 @@ var updateAllTeamScores = (tweets, teams, callback) => {
     callback(updatedTeams);
 };
 
-var minimumId = (tweets) => {
-    return tweets.map(tweet => bigInt(tweet.id_str).minus(1)).reduce((x, y) => {
-        if (x.lesser(y)) {
-            return x;
-        }
-        return y;
-    }).toString();
-};
+var minimumId = (tweets) =>
+    tweets
+        .map(tweet => bigInt(tweet.id_str).minus(1)).reduce((x, y) => {
+            if (x.lesser(y)) {
+                return x;
+            }
+            return y;
+        })
+        .toString()
 
 var getAllTweets = (callback, error, noOfCalls, params, statuses) => {
     var count = 100,
@@ -196,12 +194,14 @@ var getAllTweets = (callback, error, noOfCalls, params, statuses) => {
 
 exports.updateAllTeamScores = (callback) => {
     if (!CNST.USING_TWITTER) {
-        var tweets = JSON.parse(fs.readFileSync('./twitter_test_data.json', 'UTF-8'));
-        updateAllTeamScores(copyAllTweets(tweets.statuses), CNST.TEAMS, (teams) => callback(teams, 1));
+        var statuses = JSON.parse(fs.readFileSync('./test_data/twitter_test_data_uib.json', 'UTF-8'));
+        updateAllTeamScores(statuses, CNST.TEAMS, (teams) => callback(teams, 1));
         return;
     }
 
     getAllTweets((statuses, noOfCalls) => {
+        // If a update of test data is required, use the following:
+        // fs.writeFileSync('./test_data/twitter_test_data_uib.json', JSON.stringify(copyAllTweets(statuses)));
         updateAllTeamScores(copyAllTweets(statuses), CNST.TEAMS, (teams) => callback(teams, noOfCalls));
     });
 };
