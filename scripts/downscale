@@ -1,1 +1,0 @@
-heroku ps:resize web=hobby

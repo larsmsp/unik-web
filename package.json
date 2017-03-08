@@ -1,32 +1,31 @@
 {
-  "name": "unik-web",
+  "name": "computas-search-static",
   "version": "1.0.0",
-  "description": "A webpage for displaying rules, badges and leaderbords.",
+  "description": "A webpage for displaying static content during Abakus' 40th anniversary programming competition",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teodoran/unik-web.git"
+    "url": "git+https://github.com/larsmsp/unik-web.git"
   },
   "scripts": {
     "start": "node server.js"
   },
   "keywords": [
-    "UNIK",
-    "IoT"
+    "Computas",
+    "search",
+    "abakus"
   ],
-  "author": "@_teodoran",
+  "author": "@larsmsp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/teodoran/unik-web/issues"
+    "url": "https://github.com/larsmsp/unik-web/issues"
   },
-  "homepage": "https://github.com/teodoran/unik-web#readme",
+  "homepage": "https://github.com/larsmsp/unik-web#readme",
   "dependencies": {
     "big-integer": "^1.6.16",
     "express": "^4.13.4",
     "react-scroll": "^1.4.0",
     "react-typewriter": "^0.4.1",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll",
-    "socket.io": "^1.4.6",
-    "twitter": "^1.3.0"
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
   }
 }

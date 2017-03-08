@@ -1,1 +1,0 @@
-heroku ps:resize web=standard-1x
