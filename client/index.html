@@ -52,14 +52,123 @@
   </div>
 </div>
 
+<section class="container description">
+  <a name="mer-om-arrangementet"></a>
+  <div class="row">
+    <p>
+      Computas.com har mye tekst og mange lenker,
+      men ingen måte å raskt finne informasjonen man er ute etter.
+      Dette vil vi ha hjelp av dere til å løse! Vi ønsker oss nemlig en søkemotor for Computas.com.
+    </p>
+    <p>
+      Å implementere en søkemotor på få dager er ingen lett oppgave. Derfor anbefaler vi at dere
+      jobber sammen, <strong>opptil fire deltakere</strong>. I tillegg har vi tenkt å hjelpe
+      dere litt på veien. Computas stiller med infrastruktur og indeks, og kanskje vi slipper
+      noen kodelinjer som kan være til hjelp underveis. Jobben deres blir å lage en smart <em>crawler</em>
+      og et kreativt, flott <em>søkegrensesnitt</em>!
+    </p>
+  </div>
+</section>
+
 <div class="grey-wrapper">
   <section class="container description" id="description">
-    <a name="mer-om-arrangementet"></a>
     <div class="row">
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-bug"></i><span>Crawler</span></h2>
+        <p>
+          <em>Crawleren</em> (eller <em>spideren</em>) er programmet som finner lenker under
+          <a href="http://www.computas.com">Computas.com-domenet</a>
+          og henter ned de dataene den finner på veien. Når crawleren møter på en lenke, vil den
+          huske denne og passe på å besøke denne siden senere i crawlingen slik at ingen informasjon
+          slipper unna. Programmet vil grave seg dypere og dypere
+          inn på hjemmesiden og til slutt ha kartlagt alle områder man kan nå.
+        </p>
+        <p>
+          Dere står fritt til velge hvordan denne skal implementeres, men
+          vi anbefaler å begrense crawlingen til lenker under Computas.com, så
+          dere å laste ned hele Internett.
+        </p>
+      </div>
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-file-text-o"></i><span>Indeks</span></h2>
+        <p>
+          Vi har tillatt oss å tilby dere indeksen der dataene fra crawlingen havner.
+          Dette er en Elasticsearch-instans kjørende på Google Cloud Platform, men
+          vi har tatt bort noe av kompleksiteten ved å legge et <a href="http://api.computas-abakus.appspot.com">API</a> foran.
+          Dette krever litt struktur på dataene. All HTML fra crawlingen må skrelles bort,
+          og vi ønsker <em>tittel</em>, <em>innholdet</em> og <em>URL</em> til alle sidene dere har funnet.
+        </p>
+        <p>
+          <a href="http://api.computas-abakus.appspot.com">API-dokumentasjon</a>
+        </p>
+      </div>
+      <div class="col-sm-6 col-md-4 marg-lg-b">
+        <h2><i class="fa fa-search"></i><span>Søkegrensesnitt</span></h2>
+        <p>
+          Men hva hjelper det med struktur i informasjonen uten et sprekt søkegrensesnitt?
+          Legg hodene i bløt og design et søkegrensesnitt ingen har sett maken til!
+          Synes du det er på høy tid at morsekode gjør sin tilbakekomst?
+          Er du mer glad i å bruke snakketøyet enn fingrene for kommunikasjon med duppeditter?
+          Eller er du en kommandolinje-ninja? Kreativitet belønnes!
+      </p>
+      </div>
+      <div class="col-sm-6 col-md-6 col-md-offset-3">
+        <div class="visible-sm visible-xs">
+          <h2><i class="fa fa-trophy"></i>Profit</h2>
+          <p>
+            Konkurransen avsluttes lørdag morgen kl. 08:00. Da vurderer vi i Computas hvert bidrag, så
+            da er det <strong>veldig viktig</strong> at all kode er lagt i versjonskontrollsystemet og at
+            beskrivelsen av løsningen er på plass. Vi rekker dessverre ikke å teste alle implementasjoner,
+            så en rivende fremstilling av løsningen er &#x0391 og &#x03a9!
+          </p>
+          <p>
+            Vi vil annonsere vinneren av konkurransen på <strong>Abakus-kontoret kl. 12:00 på lørdag</strong>.
+            Hvis vinneren ikke er tilstede vil vi i Computas være der frem til 13:00 for å overrekke premien.
+          </p>
+        </div>
+        <div class="text-center visible-md visible-lg">
+          <h2><i class="fa fa-trophy"></i>Profit</h2>
+          <p>
+            Konkurransen avsluttes lørdag morgen kl. 08:00. Da vurderer vi i Computas hvert bidrag, så
+            da er det <strong>veldig viktig</strong> at all kode er lagt i versjonskontrollsystemet og at
+            beskrivelsen av løsningen er på plass. Vi rekker dessverre ikke å teste alle implementasjoner,
+            så en rivende fremstilling av løsningen er &#x0391 og &#x03a9!
+          </p>
+          <p>
+            Vi vil annonsere vinneren av konkurransen på <strong>Abakus-kontoret kl. 12:00 på lørdag</strong>.
+            Hvis vinneren ikke er tilstede vil vi i Computas være der frem til 13:00 for å overrekke premien.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </div>
+
 <section class="container description">
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-twitter"></i>Merker for Tweets</h2>
+      <p>For å få tildelt et merke, tweeter man f.eks.:</p>
+      <blockquote>
+        <p>#TeamAwesome vil ha #earlybird merket #iot_abakus</p>
+        <footer>Tweeted by <cite title="@realmunk">@realmunk</cite></footer>
+        </cite>
+      </blockquote>
+      <p>Dere må ta med #navnet på laget, #merket dere går for, og dagens unike #konkurransenavn.</p>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <h2><i class="fa fa-certificate"></i>Poeng for Replies</h2>
+      <p>Etter at dere har tweetet, kommer vi bort for å se løsningen. Om vi er fornøyde med innsatsen,
+        replyer vi dere for å gi dere merket.</p>
+
+      <p>
+        PS: Noen merker går fra lag til lag &mdash; og følger den <em>beste løsningen</em>. Da vandremerker
+        er ekstra
+        vanskelige å få &mdash; og kan til enhver tid bli stjålet av et annet lag &mdash; er de verdt ekstra
+        poeng.
+      </p>
+    </div>
+  </div>
 </section>
 
 <footer class="grey-wrapper footer">

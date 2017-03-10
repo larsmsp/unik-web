@@ -5,7 +5,7 @@ var AnimateContest = React.createClass({
                 'Har du lyst på en utfordring?',
                 'Computas.com trenger en søkemotor...',
                 'Vi står for infrastruktur i Google Cloud...',
-                'Mens du implementerer crawler og søkegrensesnitt'
+                'Mens du implementerer crawler og søkegrensesnitt',
                 'Bli med i konkurransen!'
             ]
         }
