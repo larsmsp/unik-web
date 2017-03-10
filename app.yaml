@@ -3,3 +3,4 @@ env: flex
 
 skip_files:
   - node_modules
+  - .git
