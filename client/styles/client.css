@@ -40,7 +40,7 @@ h4 {
 .overlay {
     z-index: 1;
     position: relative;
-    background-color: rgba(18, 130, 155, 0.75);
+    background-color: rgba(230, 230, 230, 0.90);
 }
 
 .scroll-round {
@@ -88,13 +88,13 @@ h4 {
 #leaderboardTable {
     margin-top: 32px;
     font-size: 2em;
-    color: white;
+    color: black;
     width: 100%;
     padding: 32px;
 }
 
 .inverted {
-    color: #fff;
+    color: #b0b0b0;
 }
 
 .navbar-brand {
@@ -131,7 +131,7 @@ h2 > i {
     padding-bottom: 32px;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 36px;
     min-height: 200px;
@@ -218,14 +218,14 @@ blockquote {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     background: #993392;
-    color: white;
+    color: black;
 }
 
 .btn-call-to-action:hover {
     background: #993392;
     border-color: #4d1a48;
     border-radius: 25px;
-    color: white;
+    color: black;
 }
 
 .btn-call-to-action,
@@ -245,12 +245,12 @@ blockquote {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    border-color: white;
+    border-color: black;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     background: transparent;
-    color: white;
+    color: black;
 }
 
 .btn-action:hover,
@@ -258,12 +258,12 @@ blockquote {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 50px;
-    border-color: white;
+    border-color: black;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     background: transparent;
-    color: white;
+    color: black;
 }
 
 .flex-row {
@@ -280,7 +280,7 @@ blockquote {
 .badge-points {
     padding: 4px 8px;
     display: inline-block;
-    color: white;
+    color: black;
     font-weight: 100;
     font-size: 14px;
     text-align: center;
@@ -319,7 +319,7 @@ blockquote {
     #leaderboardTable {
         margin-top: 32px;
         font-size: 1em;
-        color: white;
+        color: black;
         width: 100%;
         padding: 32px;
         word-break: break-all;
@@ -327,7 +327,7 @@ blockquote {
 }
 
 footer a.inverted:hover {
-    color: white;
+    color: black;
 }
 
 footer a.inverted {
