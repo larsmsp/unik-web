@@ -2,10 +2,11 @@ var AnimateContest = React.createClass({
     getDefaultProps: function () {
         return {
             text: [
-                'Hvem lager den beste IoT-løsningen?',
-                'Fem timer',
-                'En løsning',
-                'Bli med i konkurransen'
+                'Har du lyst på en utfordring?',
+                'Computas.com trenger en søkemotor...',
+                'Vi står for infrastruktur i Google Cloud...',
+                'Mens du implementerer crawler og søkegrensesnitt'
+                'Bli med i konkurransen!'
             ]
         }
     },
