@@ -357,3 +357,13 @@ footer.footer h4 {
 .no-margin {
     margin-bottom: 0;
 }
+
+.btn-primary {
+  background-color: #b21c17;
+  border-color: #b21c17
+}
+
+.btn-primary:hover {
+  background-color: #8d1c17;
+  border-color: #8d1c17
+}
