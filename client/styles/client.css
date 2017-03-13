@@ -363,7 +363,15 @@ footer.footer h4 {
   border-color: #b21c17
 }
 
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus,
 .btn-primary:hover {
+  background-color: #8d1c17 !important;
+  border-color: #8d1c17 !important
+}
+
+.btn-primary:disabled:hover {
   background-color: #8d1c17;
   border-color: #8d1c17
 }

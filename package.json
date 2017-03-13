@@ -26,6 +26,7 @@
     "express": "^4.13.4",
     "react-scroll": "^1.4.0",
     "react-typewriter": "^0.4.1",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "whatwg-fetch": "^2.0.3"
   }
 }
