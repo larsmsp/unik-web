@@ -73,6 +73,7 @@ var RegisterForm = React.createClass({
           type: 'submit',
           className: 'btn-primary btn',
           value: 'Registrering ikke åpnet',
+          disabled: true,
         })
       ),
       e('div', {className: 'alert alert-success', hidden: this.props.value.index_name === ''}, this.props.value.index_name),
