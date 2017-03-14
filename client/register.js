@@ -1,6 +1,41 @@
 const e = React.createElement;
 const fetch = window.fetch;
 
+var RegisterStatus = React.createClass({
+  propTypes: {
+    index_name: React.PropTypes.string,
+    error: React.PropTypes.string.isRequired,
+  },
+
+  getErrorMessage: function() {
+    var error_code = this.props.error;
+    if (error_code === '409') {
+      return error_code + ': Brukernavnet er opptatt.';
+    }
+    else if (error_code === '400') {
+      return error_code + ': Ett eller flere felter er ugyldig utfylt.'
+    }
+    else {
+      return 'Feil: ' + error_code;
+    }
+  },
+
+  render: function() {
+    if (this.props.error) {
+      return e('div', {className: 'alert alert-danger'}, this.getErrorMessage());
+    } else if (this.props.index_name) {
+      return e('div', {className: 'alert alert-success'},
+        e('div', {}, 'Registrering fullført! Din API-nøkkel:'),
+        e('div', {}, this.props.index_name)
+      );
+    }
+    else {
+      return false;
+    }
+  }
+
+});
+
 var RegisterForm = React.createClass({
   propTypes: {
     value: React.PropTypes.object.isRequired,
@@ -73,22 +108,26 @@ var RegisterForm = React.createClass({
           type: 'submit',
           className: 'btn-primary btn',
           value: 'Registrering ikke åpnet',
-          disabled: true,
+          //disabled: true,
         })
       ),
-      e('div', {className: 'alert alert-success', hidden: this.props.value.index_name === ''}, this.props.value.index_name),
-      e('div', {className: 'alert alert-danger', hidden: this.props.value.error === ''}, this.props.value.error)
+      e(RegisterStatus, { index_name: this.props.value.index_name, error: this.props.value.error })
     );
   }
 });
 
-var INITIAL_STATE = {name: "", email: "", repository_url: "", index_name: "", error: ""}
+var INITIAL_STATE = { name: "", email: "", repository_url: "", index_name: "", error: "" }
 
 function updateEntrant(entrant) {
   setState(entrant);
 }
 
 function registerEntrant() {
+  if (!state.name || !state.email || !state.repository_url) {
+    errorState = Object.assign({}, {error: "Ett eller flere felter er ikke utfylt."});
+    setState(errorState);
+    return;
+  }
   fd = new FormData();
   fd.append('name', state.name);
   fd.append('email', state.email);
@@ -100,12 +139,12 @@ function registerEntrant() {
     if (response.ok) {
       return response.text();
     }
-    throw Error(response.status + ' occured during registration.');
+    throw Error(response.status.toString());
   }).then(function(text) {
-    var entrant = Object.assign({}, state, {index_name: text, error: ""});
+    var entrant = Object.assign({}, { index_name: text, error: "" });
     setState(entrant);
   }).catch(function(err) {
-    var errorState = Object.assign({}, INITIAL_STATE, {error: '' + err});
+    var errorState = Object.assign({}, INITIAL_STATE, { error: err.message });
     setState(errorState);
   });
 }
