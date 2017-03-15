@@ -1,5 +1,6 @@
 const e = React.createElement;
 const fetch = window.fetch;
+const storage = window.localStorage;
 
 var RegisterStatus = React.createClass({
   propTypes: {
@@ -25,7 +26,7 @@ var RegisterStatus = React.createClass({
       return e('div', {className: 'alert alert-danger'}, this.getErrorMessage());
     } else if (this.props.index_name) {
       return e('div', {className: 'alert alert-success'},
-        e('div', {}, 'Registrering fullført! Din API-nøkkel:'),
+        e('div', {}, 'Din API-nøkkel:'),
         e('div', {}, this.props.index_name)
       );
     }
@@ -107,8 +108,8 @@ var RegisterForm = React.createClass({
         e('input', {
           type: 'submit',
           className: 'btn-primary btn',
-          value: 'Registrering ikke åpnet',
-          disabled: true,
+          value: 'Registrer',
+          disabled: localStorage.getItem('index_name'),
         })
       ),
       e(RegisterStatus, { index_name: this.props.value.index_name, error: this.props.value.error })
@@ -116,7 +117,13 @@ var RegisterForm = React.createClass({
   }
 });
 
-var INITIAL_STATE = { name: "", email: "", repository_url: "", index_name: "", error: "" }
+var INITIAL_STATE = {
+  name: "",
+  email: "",
+  repository_url: "",
+  index_name: localStorage.getItem('index_name'),
+  error: ""
+}
 
 function updateEntrant(entrant) {
   setState(entrant);
@@ -132,7 +139,7 @@ function registerEntrant() {
   fd.append('name', state.name);
   fd.append('email', state.email);
   fd.append('repository_url', state.repository_url);
-  fetch('https://api-dot-sinuous-tine-156112.appspot.com/index/register', {
+  fetch('https://abakus-api-dot-sinuous-tine-156112.appspot.com/register', {
     method: 'post',
     body: fd
   }).then(function(response) {
@@ -141,6 +148,7 @@ function registerEntrant() {
     }
     throw Error(response.status.toString());
   }).then(function(text) {
+    localStorage.setItem('index_name', text);
     var entrant = Object.assign({}, { index_name: text, error: "" });
     setState(entrant);
   }).catch(function(err) {
