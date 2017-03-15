@@ -108,7 +108,7 @@ var RegisterForm = React.createClass({
           type: 'submit',
           className: 'btn-primary btn',
           value: 'Registrering ikke åpnet',
-          //disabled: true,
+          disabled: true,
         })
       ),
       e(RegisterStatus, { index_name: this.props.value.index_name, error: this.props.value.error })
