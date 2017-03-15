@@ -52,100 +52,164 @@
 <section class="container description" id="description">
   <div class="row">
     <a name="api"></a>
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-12">
       <h2><i class="fa fa-file-text-o"></i>API-dokumentasjon</h2>
-  </div>
+    </div>
     <div class="row">
-    <div class="col-md-8 col-md-offset-3">
+    <div class="col-md-12">
       <p>
-        APIets URL er https://abakus-api-dot-sinuous-tine-156112.appspot.com/<api_key>. <br>
-        Bruk metodene /put, /search og /clear for å ta APIet i bruk, som beskrevet under.
+        API-ets URL er <em><a href="https://abakus-api-dot-sinuous-tine-156112.appspot.com/">
+        https://abakus-api-dot-sinuous-tine-156112.appspot.com/</a>&lt;API-nøkkel&gt;</em>, der <em>&lt;API-nøkkel&gt;</em>
+        er API-nøkkelen du eller gruppen din fikk ved registrering.
+      </p>
+      <p>
+        Bruk metodene <tt>/put</tt>, <tt>/search</tt> og <tt>/clear</tt> for å ta API-et i bruk, som beskrevet under.
       </p>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-md-8 col-md-offset-3">
-      <h3>/put</h3>
-      <p>
-        Lagrer en side i indexen deres, som dere kan søke i senere.
-      </p>
-      <pre>
-      REQUEST
-        <code>
-              curl -v -XPOST -H 'Content-Type: application/json' -d 
-              '[{ "id": "1", 
-                  "title": "Om oss", 
-                  "contents": "Computas er et løsningshus basert i Norge", 
-                  "url": "http://computas.com/om"
-                }]' 
-
-              http://localhost:5000/f61fbb45-b9bd-41ea-8b46-a817df01d1bb/put
-        </code>
-        </pre>
+</section>
+<div class="grey-wrapper">
+  <section class="container description">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>/put</h3>
+        <p>
+          Lagrer en side i indeksen deres, som dere kan søke i senere.
+          Hvert dokument blir indeksert i Elasticsearch med analysen
+          <em><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/analysis-lang-analyzer.html#norwegian-analyzer">norwegian</a></em>.
+        </p>
+        <p>
+          API-et forventer en liste av dokumenter strukturert som JSON.
+          Hvert dokument <strong>må</strong> inneholde feltene <tt>id</tt>, <tt>title</tt>, <tt>contents</tt> og <tt>url</tt>.
+        </p>
+        <p>
+          <strong>OBS:</strong> Hvis man indekserer to dokumenter med samme ID vil den siste indekseringen overskrive den første uten advarsel.<br>
+          Dette kan også benyttes dersom man skulle ønske å oppdatere et dokument i indeksen.
+        </p>
         <pre>
-        RESPONSE
-        <code>
-              {
-                "indexed_documents": 1
-              }
-        </code>
-      </pre>
-    </div>
-  </div>
+  # POST /put (application/json)
+  [{
+    "id": "&lt;id&gt;",
+    "title": "&lt;tittel&gt;",
+    "contents": "&lt;innhold i dokument&gt;",
+    "url": "&lt;url til dokument&gt;"
+  }]
 
+  + Response 200 (application/json)
+  {
+    "indexed_documents": &lt;antall indekserte dokumenter&gt;
+  }
+        </pre>
+        <h4>Eksempel</h4>
+        <pre>
+          <code>
+$ curl -X -H 'Content-Type: application/json' https://abakus-api-dot-sinuous-tine-156112.appspot.com/&lt;API-nøkkel&gt;/put -d
+  '[{ "id": "1",
+    "title": "Om oss",
+    "contents": "Computas er et løsningshus basert i Norge",
+    "url": "http://computas.com/om"
+  }]'
+
+---
+
+{
+  "indexed_documents": 1
+}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="container description">
   <div class="row">
-    <div class="col-md-8 col-md-offset-3">
+    <div class="col-md-12">
       <h3>/search</h3>
-      <p>
-        Henter ut sider i indexen som matcher søkestrengen.
-      </p>
-      <pre>
-      REQUEST
-        <code>
-          curl -v http://localhost:5000/f61fbb45-b9bd-41ea-8b46-a817df01d1bb/search  
-          -H 'Content-Type: application/json' 
-          -d '{"query":"bulk"}'
-        </code>
-      </pre>
-      <pre>
-        RESPONSE
-        <code>
-          {
-            "index": "f61fbb45-b9bd-41ea-8b46-a817df01d1bb",
-            "results": [
-            {
-              "contents": "Bulk indexing might work",
-              "created_at": "2017-03-15T15:54:52.423918",
-              "id": "2",
-              "score": 0.35355338,
-              "title": "Bulk indexing",
-              "url": "http://theurl"
-            },
-            {
-              "contents": "Bulk indexing might work. might overwrite too",
-              "created_at": "2017-03-15T16:08:44.608036",
-              "id": "3",
-              "score": 0.35355338,
-              "title": "Bulk indexing",
-              "url": "http://theurl"
-            }
-            ],
-            "total": 2
-          }
-        </code>
-      </pre>
-    </div>
-  </div>
+        <p>
+          Henter ut sider i indeksen som matcher eller delvis matcher søkestrengen.<br>
+          Søkestrengen blir sendt direkte videre til Elasticsearch sitt <em><a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl-query-string-query.html">Query String API</a></em>. Det betyr at dette søket
+          har de samme egenskapene som en <em>Query String Query</em> til Elasticsearch. F.eks. kan man søke på <em>"this AND that"</em> eller
+          <em>"these OR those"</em>. I tillegg kan man sette inn "*" for wildcard eller konstruere andre slags søk.
+        </p>
+        <p>
+          I søkeresultatet finnes et score-felt som sier noe om hvor relevant Elasticsearch mener resultatet er. Høyere score (nærmere 1.0) er bedre.
+        </p>
+        <pre>
+  # POST /search (application/json)
+  {"query": "&lt;søketermer&gt;"}
 
-  <div class="row">
-    <div class="col-md-8 col-md-offset-3">
-      <h3>/clear</h3>
-      <p>
-        Sletter alt dere har lagret i indexen.
-      </p>
+  + Response 200 (application/json)
+  {
+    "index": "&lt;API-nøkkel&gt;",
+    "results": [
+      {
+        "id": "&lt;id&gt;",
+        "title": "&lt;tittel&gt;",
+        "contents": "&lt;innhold i dokument&gt;",
+        "url": "&lt;url til dokument&gt;",
+        "created_at": "&lt;tidspunkt dokumentet ble indeksert&gt;",
+        "score": "&lt;Elasticsearch' score for relevans&gt;"
+      }
+    ]
+  }
+        </pre>
+        <h4>Eksempel</h4>
+        <pre>
+          <code>
+$ curl -X -H 'Content-Type: application/json' https://abakus-api-dot-sinuous-tine-156112.appspot.com/&lt;API-nøkkel&gt;/search -d
+  '{"query":"bulk"}'
+
+---
+
+{
+  "index": "f61fbb45-b9bd-41ea-8b46-a817df01d1bb",
+  "results": [
+    {
+      "contents": "Bulk indexing might work",
+      "created_at": "2017-03-15T15:54:52.423918",
+      "id": "2",
+      "score": 0.35355338,
+      "title": "Bulk indexing",
+      "url": "http://theurl"
+    },
+    {
+      "contents": "Bulk indexing might work. might overwrite too",
+      "created_at": "2017-03-15T16:08:44.608036",
+      "id": "3",
+      "score": 0.35355338,
+      "title": "Bulk indexing",
+      "url": "http://theurl"
+    }],
+  "total": 2
+}
+        </code>
+      </pre>
     </div>
   </div>
+</section>
+
+<div class="grey-wrapper">
+  <section class="container description">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>/clear</h3>
+        <p>
+          Sletter alt dere har lagret i indeksen.
+        </p>
+        <pre>
+  # POST /clear
+  + Response 200
+        </pre>
+        <h4>Eksempel</h4>
+        <pre>
+          <code>
+$ curl -X -H 'Content-length: 0' https://abakus-api-dot-sinuous-tine-156112.appspot.com/&lt;API-nøkkel&gt;/search
+          </code>
+        </pre>
+      </div>
+    </div>
+  </section>
+</div>
 
 <footer class="grey-wrapper footer">
   <section class="container description no-margin">
